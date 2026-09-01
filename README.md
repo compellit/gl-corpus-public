@@ -2,7 +2,7 @@
 
 TEI versions created at the [COMPEL](https://compellit.github.io) project for **public domain sources only**.
 
-The poems bear the following prosodic information, obtained automatically with the GALAPAGOS toolkit (Galician Automatic Poetry Analysis System), NLP-based tools developed in the project:
+The poems bear the following prosodic information, obtained automatically with the GALAPAGOS toolkit (Galician Automatic Poetry Analysis System), which consists of NLP-based tools developed in the project:
 
 - Metrical tagging. The module for this is released as [GAMA](https://github.com/compellit/gama-sym)
 - Enjambment, following the typology and method in Haider et al. (forthcoming). See `encodingDesc` for a description. Labeling is done with a fine-tuned BERT model for sentence-pair classification. Models yet unreleased.
