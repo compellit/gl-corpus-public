@@ -1,0 +1,2746 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/css" href="../css/poem.css"?>
+<?xml-model href="https://raw.githubusercontent.com/compellit/corpus-schema/main/out/compel-schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>O divino sainete</title>
+        <author key="wikidata:Q2242172">
+          <persName>
+            <forename>Manuel</forename>
+            <surname>Curros</surname>
+            <surname>Enríquez</surname>
+          </persName>
+        </author>
+        <principal xml:id="prf" key="viaf:13167319317577741422">Pablo Ruiz Fabo</principal>
+        <respStmt>
+          <resp>TEI encoding</resp>
+          <name xml:id="aap">Anxo Alonso Pérez</name>
+          <name xml:id="pm">Pauline Moreau</name>
+          <name corresp="#prf">Pablo Ruiz Fabo</name>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="poems">1</measure>
+        <measure unit="lines">1497</measure>
+      </extent>
+      <publicationStmt>
+        <publisher>COMPEL Project, CiTIUS - Universidade de Santiago de Compostela</publisher>
+        <availability>
+          <licence>
+            <ab>CC BY 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by/4.0/">Licence</ref>
+          </licence>
+        </availability>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q20548841</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl type="digitalSource">
+          <name>Galiciana - Clásicos da literatura galega</name>
+          <idno type="URL">http://biblioteca.galiciana.gal/clasicos_epub/gl/consulta/registro.do?id=505628</idno>
+          <bibl type="originalSource">
+            <author key="wikidata:Q2242172">
+              <forename>Manuel</forename>
+              <surname>Curros</surname>
+              <surname>Enríquez</surname>
+            </author>
+            <title type="main">O divino sainete</title>
+            <pubPlace>A Coruña</pubPlace>
+            <publisher>Andrés Martínez Salazar</publisher>
+            <date when="1888" type="print">1888</date>
+            <date type="written"/>
+          </bibl>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>The introduction was encoded in the body (easier automatic processing of entire
+          collection and it is really a part of the work, same stanza types etc.).</p>
+      </editorialDecl>
+      <metDecl type="met">
+        <p>The metrical patterns were extracted automatically using our <ref target="https://github.com/compellit/gama-sym">GAMA</ref> tool.</p>
+        <p><att>met</att> encodes the metrical pattern as a series of 1-indexed stressed
+          syllable positions, and the custom attribute <att>metRg</att> encodes
+          the series after removing antirhythmic stresses (<emph>acentos antirrítmicos</emph>). 
+        </p>
+      </metDecl>
+      <metDecl type="enjamb">
+        <p>Identifies enjambment value for the line-pair starting where the label occurs.</p>
+        <p>The values of the <att>enjamb</att> atribute were extracted automatically with a
+          fine-tuned BERT model, following the approach in Haider et al. (forthcoming).</p>
+        <p>In type 1, the line boundary interrupts a word, in type 2
+        it interrupts a phrase. In type 3 it coincides with the end of a a phrase and in
+        type 4 it coincides with the end of a clause. Type 5 is absence of enjambment.</p>
+          <p>The <att>cert</att> in each <gi>l</gi> element stores the probability
+          assigned by the classifier to the predicted <att>enjamb</att> label for the line pair.</p>
+      </metDecl>
+      <metDecl type="rhyme">
+        <p>Rhyme pairs were detected automatically with a yet unreleased tool developed in the project.</p>
+        <p>A 5-line window is taken into account to assess rhyme candidates.</p>
+        <p>Uppercase letters are used if the line is <emph>arte mayor</emph> (i.e. has at least 9 syllables)</p>
+      </metDecl>
+      <metDecl type="stanza">
+        <p>Stanza classification took place with a yet unreleased tool developed in the project.</p>
+        <p>For now, the type inventory can be seen in the Schematron rules in the project's <ref target="https://github.com/compellit/corpus-schema/blob/main/compel-schema.odd">TEI customization</ref></p>
+      </metDecl>
+    </encodingDesc>
+    <profileDesc>
+      <particDesc>
+        <listPerson>
+          <person xml:id="cpl-032">
+            <idno type="wikidata" cert="high">Q2242172</idno>
+            <persName type="short">Curros Enríquez</persName>
+            <persName type="full">
+              <forename>Manuel</forename>
+              <surname>Curros Enríquez</surname>
+            </persName>
+            <sex value="M"/>
+            <birth>
+              <location>
+                <placeName>
+                  <settlement>Celanova</settlement>
+                  <region type="province">Ourense</region>
+                  <region type="region">Galicia</region>
+                  <country>Spain</country>
+                  <bloc>Europe</bloc>
+                </placeName>
+              </location>
+              <date when="1851-09-15">1851-09-15</date>
+              <date type="century">19</date>
+            </birth>
+            <death>
+              <location>
+                <placeName>
+                  <settlement>A Habana, Provincia da Habana</settlement>
+                </placeName>
+              </location>
+              <date when="1908-03-07">1908-03-07</date>
+              <date type="century">20</date>
+            </death>
+          </person>
+        </listPerson>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2025-04-20" who="prf">Initial TEI version</change>
+      <change when="2026-09-01" who="#prf">Initial public TEI version</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front/>
+    <body>
+      <div type="poem">
+        <div type="poem-section" rend="stars-below">
+          <head>Introducion</head>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9982" rhyme="a">Sinto n’o peito us afogos</l>
+              <l met="3 7" enjamb="3" cert="0.9984" rhyme="-">Que parece que m’o morden</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="5" cert="0.9983" rhyme="a">Sete ducias de cans dogos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="2" cert="0.9951" rhyme="b">Dis que son remordementos</l>
+              <l met="2 4 7" enjamb="2" cert="0.9931" rhyme="-">D’os meus pecados á miles,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9984" rhyme="b">D’as miñas culpas á centos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.9981" rhyme="c">Culpas d’home mal cristiano</l>
+              <l met="2 5 7" enjamb="4" cert="0.9983" rhyme="-">Pecados d’herexe, tales</l>
+              <l met="2 4 7" enjamb="5" cert="0.9975" rhyme="c">Que non lles val zuruxano.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.6584">
+              <l met="4 6 7" metRg="4 7" enjamb="4" cert="0.9984" rhyme="-">Pra me curar bebin agoas,</l>
+              <l met="2 3 6 7" metRg="2 7" enjamb="4" cert="0.9983" rhyme="-">Pisei herbas, recei tríos,</l>
+              <l met="2 3 6 7" metRg="2 7" enjamb="5" cert="0.9983" rhyme="-">Biquei Santos, vertin bágoas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="4" cert="0.9977" rhyme="d">Non hai festa ou romaría</l>
+              <l met="4 6 7" metRg="4 7" enjamb="5" cert="0.9983" rhyme="-">Onde empanado non fose.</l>
+              <l met="1 4 7" enjamb="5" cert="0.9984" rhyme="d">¡Nunca topei milloría!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.9982" rhyme="e">Pra me librar d’este estrago</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9984" rhyme="-">Fun ver o Cristo d’Ourense,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9979" rhyme="e">Tomei a manta en Santiago.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9982" rhyme="f">Quedei de noite ó recío,</l>
+              <l met="2 7" enjamb="4" cert="0.9982" rhyme="-">Coséronme os Evanxelios,</l>
+              <l met="3 7" enjamb="5" cert="0.9949" rhyme="f">Solagáronme n’o río...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9962" rhyme="g">¡Pr’os males de qu’eu me doyo,</l>
+              <l met="1 5 7" enjamb="4" cert="0.9981" rhyme="-">Dicen os que ben o saben</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="5" cert="0.9984" rhyme="g">Que hai un curandeiro soyo!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 6 7" metRg="4 7" enjamb="5" cert="0.9979" rhyme="h">O curandeiro está en Roma.</l>
+              <l met="1 2 7" metRg="2 7" enjamb="4" cert="0.9979" rhyme="-">Vou ver se me dá a saúde...</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9976" rhyme="h">Vou ver se o pulso me toma.</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section" rend="stars-below">
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9961" rhyme="i">Xa miña nai m’o dicía:</l>
+              <l met="2 3 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9976" rhyme="-">”¿Onde has d’ir, boi que non aras,</l>
+              <l met="2 7" enjamb="5" cert="0.9981" rhyme="i">”Senon á cortaduría?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9983" rhyme="j">”Tanto saber traite cego;</l>
+              <l met="1 3 7" enjamb="4" cert="0.9984" rhyme="-">”Mais, ou morres condanado</l>
+              <l met="2 5 7" enjamb="5" cert="0.9975" rhyme="j">”Ou tés que volver ó rego.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.9983" rhyme="k">”Olla que o tempiño foxe,</l>
+              <l met="1 2 5 6 7" metRg="2 5 7" enjamb="4" cert="0.9983" rhyme="-">”Y-é ben pra mañan non gardes</l>
+              <l met="3 6 7" metRg="3 7" enjamb="5" cert="0.9975" rhyme="k">”O que poidas facer oxe.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9806">
+              <l met="2 4 7" enjamb="4" cert="0.9975" rhyme="l">”Que a morte non nos avisa,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="-">”E se ha levarnos cubertos,</l>
+              <l met="2 4 7 9" enjamb="5" cert="0.9982" rhyme="L">”Que non nos colla en camisa.„</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="5" cert="0.9983" rhyme="m">¡Tiña de ser! ¡Diol-o quixo!</l>
+              <l met="1 3 5 7" enjamb="3" cert="0.9985" rhyme="-">¡Él, que crióu d’un arroto</l>
+              <l met="1 4 7" enjamb="5" cert="0.9982" rhyme="m">Todal-as cousas, sin lixo!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9977" rhyme="n">Nunca outra tal s’ha de vere:</l>
+              <l met="1 4 7" enjamb="3" cert="0.9981" rhyme="-">¡Curros camiño de Roma</l>
+              <l met="2 7" enjamb="5" cert="0.9983" rhyme="n">Entoando o <seg rend="em">Miserere!</seg></l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 5 7" metRg="2 4 7" enjamb="2" cert="0.9961" rhyme="ñ">¿Pero hei ser sempre un brasfemo,</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="2" cert="0.9947" rhyme="-">Un xudío, un relaxado</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9983" rhyme="ñ">De Dios azoute? ¡Ora o Demo!...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.9983" rhyme="o">¿Quén, necesitado d’elas,</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.9984" rhyme="-">Non merca saúde e groria</l>
+              <l met="2 4 7" enjamb="5" cert="0.9982" rhyme="o">Por unhas cantas cadelas?</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section" rend="stars-below">
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9983" rhyme="p">Todo vai caro n’a vida.</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="3" cert="0.9953" rhyme="-">A groria é que anda barata</l>
+              <l met="4 7" enjamb="5" cert="0.9984" rhyme="p">Como a sardiña manida.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.9677" rhyme="q">Certa literata fea</l>
+              <l met="2 4 7" enjamb="3" cert="0.9983" rhyme="-">Mercóuna dando á Aristarco</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="5" cert="0.9983" rhyme="q">Un bico tras d’unha cea.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.998" rhyme="r">Á un usureiro con sorte</l>
+              <l met="2 5 7" enjamb="3" cert="0.997" rhyme="-">Custóulle... perdoar inxurias...</l>
+              <l met="4 7" enjamb="5" cert="0.9981" rhyme="r">N’as boquëadas d’a morte.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l rend="flush" met="1 3 5 7" enjamb="3" cert="0.9975" rhyme="s">¡Y-é que n’este tempo infame</l>
+              <l met="2 4 7" enjamb="4" cert="0.998" rhyme="-">A Crítica anda saída</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="s">Y-os Santos morren de fame!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9981" rhyme="t">O inferno á min non m’atrapa:</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9975" rhyme="-">Cómpreme unha pouca groria</l>
+              <l met="2 5 7" enjamb="5" cert="0.9983" rhyme="t">E voulla comprar ó Papa.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="5" cert="0.9983" rhyme="u">É un viaxe de recreo.</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.997" rhyme="-">¿Quén folga de vir comigo</l>
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9983" rhyme="u">De Leon XIII ó xubileo?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="2" cert="0.8519" rhyme="v">Con nosco irán moitas xentes:</l>
+              <l met="2 4 7" enjamb="5" cert="0.9943" rhyme="w">Abades, monxas, beatas...</l>
+              <l met="1 3 4 6 7" metRg="1 3 7" enjamb="5" cert="0.9984" rhyme="v">¡Xuro á Dios qu’hemos d’ir quentes!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="2" cert="0.9606" rhyme="x">¡Qué rosario, compañeiros,</l>
+              <l met="2 7" enjamb="3" cert="0.9982" rhyme="w">De contas d’amancebadas</l>
+              <l met="2 7" enjamb="5" cert="0.9983" rhyme="x">Con deces de putañeiros!</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9981" rhyme="y">Mais todos van compunxidos,</l>
+              <l met="1 4 7" enjamb="3" cert="0.781" rhyme="-">Todos como eu apenados,</l>
+              <l met="2 7" enjamb="5" cert="0.9977" rhyme="y">Chorosos y-arrepentidos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="5" cert="0.5738" rhyme="z">¡Milagre santo e profundo,</l>
+              <l met="1 4 7" enjamb="2" cert="0.9941" rhyme="aa">Fillo d’o nobre deseo</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="5" cert="0.9984" rhyme="z">De ver á Dios... e ver mundo!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 6 7" metRg="3 7" enjamb="4" cert="0.9984" rhyme="ab">Como xa a gracia non baixa,</l>
+              <l met="1 2 3 5 6 7" metRg="1 3 5 7" enjamb="4" cert="0.9981" rhyme="aa">Non hai modo d’ir pr’o ceo</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="5" cert="0.9983" rhyme="ab">Se o tren non nos fai rebaixa.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="5" cert="0.9982" rhyme="ac">Esa rebaixa está feita.</l>
+              <l met="1 4 7" enjamb="3" cert="0.6616" rhyme="ad">¡Todo de quen pra salvarse</l>
+              <l met="1 4 7" enjamb="5" cert="0.9984" rhyme="ac">Tal acasión n’aproveita!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="5 7" enjamb="4" cert="0.9981" rhyme="ae">Mentres o camiño dura</l>
+              <l met="1 5 7" enjamb="2" cert="0.9932" rhyme="ad">Hei de vos cantar cantares</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9983" rhyme="ae">D’unha non vista hermosura.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="5" cert="0.945" rhyme="af">Trïadas, miñas trïadas</l>
+              <l met="3 6 7" metRg="3 7" enjamb="2" cert="0.9951" rhyme="-">Que levades os tres fíos</l>
+              <l met="2 7" enjamb="4" cert="0.9952" rhyme="af">D’as frechas envenenadas:</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="5" cert="0.766" rhyme="ag">Miñas triadas valentes,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9153" rhyme="-">¡Rachade os aires fungando</l>
+              <l met="3 7" enjamb="5" cert="0.998" rhyme="ag">Como fungan as serpentes!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9977" rhyme="ah">Ladrade, mordede, ríde:</l>
+              <l met="2 5 7" enjamb="4" cert="0.9979" rhyme="-">Onde haxa virtú, bicade,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9982" rhyme="ah">Onde haxa vicio, feride.</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <head>I</head>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9604" rhyme="ai">Era o Nadal: noite fría</l>
+              <l met="1 4 7" enjamb="4" cert="0.9982" rhyme="-">Iba pechando entre nubes</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9982" rhyme="ai">Que un vento forte tanguía.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.8251">
+              <l met="2 4 7" enjamb="4" cert="0.967" rhyme="aj">Desertas prazas e ruas,</l>
+              <l met="2 4 7" enjamb="3" cert="0.857" rhyme="-">Madrí estremélase todo</l>
+              <l met="2 5 7" enjamb="5" cert="0.998" rhyme="aj">D'o norte ás rafagas cruas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9198" rhyme="ak">N'o meu capote embrullado</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.9974" rhyme="-">Eu iba, cal sempre, triste,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9982" rhyme="ak">Por longa estrada enfiado,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9928" rhyme="al">Pensando co'a testa ó peito</l>
+              <l met="2 5 7" enjamb="3" cert="0.9976" rhyme="-">N'aquiles que n'esta noite</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.998" rhyme="al">Non teñen lume nin leito,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="2" cert="0.9942" rhyme="am">Cando, n'a inmensa negrura</l>
+              <l met="2 7" enjamb="3" cert="0.9283" rhyme="-">D'a sombra que m'envolvía</l>
+              <l met="3 7" enjamb="4" cert="0.9984" rhyme="am">Como n'unha sepoltura,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.9899" rhyme="an">Escoitéi mainiño e quedo</l>
+              <l met="1 4 7" enjamb="4" cert="0.9977" rhyme="-">Grave romor de parola</l>
+              <l met="5 7" enjamb="5" cert="0.9979" rhyme="an">Que m'harripióu de medo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.9923" rhyme="añ">—¡Ay d'o que busca a verdade</l>
+              <l met="2 5 7" enjamb="4" cert="0.9979" rhyme="-">D'a fé c'o candil mortizo,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9984" rhyme="añ">Que nunca deu craridade!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="5" cert="0.9984" rhyme="ao">¡Ay d'o que en sombras camiña!</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.9981" rhyme="-">¡Ay d'o que quer facer caldo</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9984" rhyme="ao">E non ten unto e fariña!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9983" rhyme="ap">¡Ay d'o que as festas condena,</l>
+              <l met="2 5 7" enjamb="4" cert="0.996" rhyme="-">E quer millorar as xentes</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="ap">Fuxindo d'elas con pena!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.998" rhyme="aq">Así unha voz me dicía</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.9981" rhyme="-">Que un longo, invisibre coro</l>
+              <l met="1 3 7" enjamb="5" cert="0.998" rhyme="aq">Lentamente repetía.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="3" cert="0.9857" rhyme="ar">Era un coro resoante,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9983" rhyme="-">Como un piñar que removen</l>
+              <l met="2 7" enjamb="4" cert="0.5579" rhyme="ar">As témporas d'o levante;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.967" rhyme="as">Coro en que hai xordos queixidos,</l>
+              <l met="2 5 7" enjamb="2" cert="0.9829" rhyme="at">Estralos de gallas secas</l>
+              <l met="5 7" enjamb="2" cert="0.9929" rhyme="as">E de corazós partidos,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="2" cert="0.9939" rhyme="au">Afagos de suaves brisas,</l>
+              <l met="1 4 7" enjamb="2" cert="0.8908" rhyme="at">Berros de gorxas abertas,</l>
+              <l met="1 5 7" enjamb="5" cert="0.9977" rhyme="au">Notas d'afogadas risas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9722" rhyme="av">De forte facendo gala</l>
+              <l met="2 4 7" enjamb="4" cert="0.9982" rhyme="-">Erguin a testa soberbo</l>
+              <l met="4 5 7" metRg="4 7" enjamb="5" cert="0.9502" rhyme="av">E perguntéi: —¿Quén me fala?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9984" rhyme="aw">Y-a voz tornóu: —Non ch'o digo</l>
+              <l met="1 5 6 7" metRg="1 5 7" enjamb="4" cert="0.9857" rhyme="-">S'antes sobr'a crus non xuras</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9912" rhyme="aw">Ir, ond'eu vaya, comigo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9982" rhyme="ax">—Xurado está, s'é por eso;</l>
+              <l met="1 5 7" enjamb="4" cert="0.9794" rhyme="-">Que oxe por xurar en falso</l>
+              <l met="3 5 7" enjamb="5" cert="0.9981" rhyme="ax">A ninguén che levan preso.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9806">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="3" cert="0.998" rhyme="ay">Así falei; voz estraña</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="4" cert="0.9753" rhyme="ax">Berróu n'este medio tempo:</l>
+              <l met="2 7 9" enjamb="5" cert="0.9978" rhyme="AY">”¡Adiante a Santa Compaña!„.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9983" rhyme="az">E us brincando, outros ausortos,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9983" rhyme="-">Miréi pasar en ringleira</l>
+              <l met="1 5 7" enjamb="4" cert="0.9982" rhyme="az">Unha procesion de mortos,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.9971" rhyme="ba">E sentin n'as pedras duras</l>
+              <l met="2 4 7" enjamb="4" cert="0.9913" rhyme="-">Ruxir de zocos, sandalias</l>
+              <l met="3 7" enjamb="5" cert="0.9881" rhyme="ba">E talares vesteduras.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.9966" rhyme="bb">D'a procesión marcha diante</l>
+              <l met="4 7" enjamb="4" cert="0.9978" rhyme="-">O que falara primeiro</l>
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9981" rhyme="bb">E detrás un redobrante.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9954" rhyme="bc">De tempo en tempo parando,</l>
+              <l met="3 5 7" enjamb="3" cert="0.9956" rhyme="-"><seg rend="em">¡Racatapran!</seg>... xordamente</l>
+              <l met="3 5 7" enjamb="5" cert="0.9754" rhyme="bc"><seg rend="em">¡Racatapran!</seg>... vai dobrando.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="2" cert="0.6229" rhyme="bd">D'insana curiosidade</l>
+              <l met="2 5 7" enjamb="4" cert="0.5336" rhyme="-">Levado, seguín ós mortos</l>
+              <l met="3 7" enjamb="4" cert="0.9979" rhyme="bd">Pol-a densa escuridade,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="2" cert="0.9923" rhyme="be">E fomos con paso incerto</l>
+              <l met="1 3 7" enjamb="3" cert="0.9959" rhyme="-">D'ancha gándara areosa</l>
+              <l met="4 7" enjamb="5" cert="0.9976" rhyme="be">Atravesando o deserto.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="4" cert="0.9611" rhyme="bf">Alá lonxe, fulgurantes,</l>
+              <l met="4 6 7" metRg="4 7" enjamb="2" cert="0.9826" rhyme="bg">Asomellando dous soles</l>
+              <l met="1 7" enjamb="3" cert="0.9947" rhyme="bf">Fixos e parpadexantes,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="3" cert="0.9984" rhyme="bg">Relocian n'o hourizonte</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.9984" rhyme="-">Dous discos roxos, que finxen</l>
+              <l met="2 4 7" enjamb="5" cert="0.9978" rhyme="bg">Os ollos d'un mastodonte.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="5" cert="0.9976" rhyme="bh">—¿Onde esta xente me leva?</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="3" cert="0.9984" rhyme="-">Pensaba eu, indo ás palpadas</l>
+              <l met="4 7" enjamb="5" cert="0.9984" rhyme="bh">Pol-o camiño de treva.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="4" cert="0.9981" rhyme="bi">¿Volveréime tolo agora</l>
+              <l met="4 7" enjamb="5" cert="0.9979" rhyme="-">Ou pillaríanme as bruxas?...</l>
+              <l met="3 5 7" enjamb="5" cert="0.9982" rhyme="bi">¡San Silvestre! ¡meigas fora!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="4" cert="0.8578" rhyme="bj">Y-o tambor que ó par levaba:</l>
+              <l met="3 7" enjamb="3" cert="0.9838" rhyme="-"><seg rend="em">¡Racatapran! —</seg>solasmentes</l>
+              <l met="3 7" enjamb="5" cert="0.998" rhyme="bj"><seg rend="em">¡Racatapran! </seg>—contestaba.</l>
+            </lg>
+          </lg>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="bk">De pronto paróuse o coro,</l>
+              <l met="2 5 7" enjamb="4" cert="0.9981" rhyme="-">Volvéuse pra min o guia</l>
+              <l met="3 7" enjamb="5" cert="0.9972" rhyme="bk">Y-acenóume con decoro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9981" rhyme="bl">Detiven enton a pranta</l>
+              <l met="3 5 7" enjamb="3" cert="0.995" rhyme="bm">E topéime á campo aberto</l>
+              <l met="1 4 7" enjamb="5" cert="0.9947" rhyme="bl">N'unha pranura que espanta.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.6634" rhyme="bn">Diante de min, encurvado</l>
+              <l met="2 5 6 7" metRg="2 5 7" enjamb="2" cert="0.9952" rhyme="bm">Sobre unha caxata, un vello</l>
+              <l met="4 7" enjamb="4" cert="0.9963" rhyme="bn">D'a pelresia tocado,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9953" rhyme="bñ">Ollábame fito á fito</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.7361" rhyme="bo">C'os seus grandes ollos d'águia,</l>
+              <l met="1 4 7" enjamb="5" cert="0.9928" rhyme="bñ">D'un cristicismo infinito.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9979" rhyme="bp">Coroza viste e monteira;</l>
+              <l met="2 3 4 6 7" metRg="2 4 7" enjamb="4" cert="0.6617" rhyme="bo">De sol é feita a sua cara,</l>
+              <l met="2 4 7" enjamb="4" cert="0.998" rhyme="bp">De lua sua cabeleira,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9981" rhyme="bq">E ten nos beizos gallegos</l>
+              <l met="5 7" enjamb="2" cert="0.9935" rhyme="bp">As <seg rend="em">sexipedalia verba</seg></l>
+              <l met="2 4 7" enjamb="5" cert="0.9976" rhyme="bq">D'os grandes tráxicos griegos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9526" rhyme="br">—Mortal que hastr'aquí chegache</l>
+              <l met="2 5 7" enjamb="4" cert="0.9983" rhyme="-">Con ánemo forte e rixo,</l>
+              <l met="2 7" enjamb="4" cert="0.9983" rhyme="br">Comprindo o que me xurache,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="bs">S'o teu arroxo non mente</l>
+              <l met="3 7" enjamb="4" cert="0.7403" rhyme="bt">E com'eres d'arriscado</l>
+              <l met="1 4 7" enjamb="4" cert="0.9978" rhyme="bs">Eres d'agudo e prudente;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.9961" rhyme="bu">Tí, que buscas sin paría,</l>
+              <l met="2 4 7" enjamb="4" cert="0.993" rhyme="bt">Consolos pr'os disgraciados</l>
+              <l met="3 7" enjamb="4" cert="0.9955" rhyme="bu">E pr'as almas alegría;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.97" rhyme="bv">Tí, meu coitado San Bode</l>
+              <l met="4 7" enjamb="4" cert="0.9983" rhyme="-">D'escepticismo repreto,</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.998" rhyme="bv">Que quere creer... e non pode;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 5 7" metRg="1 3 5 7" enjamb="3" cert="0.9554" rhyme="bu">Tí, que ves n'un mesmo día</l>
+              <l met="2 3 6 7" metRg="2 7" enjamb="2" cert="0.5876" rhyme="-">Nacer Dios e caer morto</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9981" rhyme="bu">De inania canto Dios cría...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.9839" rhyme="bw">Y-á espricarte non acertas</l>
+              <l met="1 4 7" enjamb="4" cert="0.8006" rhyme="-">D'eses contrastel-as causas,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9966" rhyme="bw">Pra tí entre sombra cobertas;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.998" rhyme="bx">Disponte, que vou levarte</l>
+              <l met="3 7" enjamb="4" cert="0.6889" rhyme="-">Onde todol-os misterios</l>
+              <l met="1 3 7" enjamb="4" cert="0.9984" rhyme="bx">Han deixar d'atormentarte</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="5 7" enjamb="4" cert="0.9984" rhyme="by">Y-onde, d'a razon co'a axuda,</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.9974" rhyme="-">Non máis ch'estrocen a alma</l>
+              <l met="2 4 7" enjamb="5" cert="0.9982" rhyme="by">Os negros dentes d'a duda.</l>
+            </lg>
+          </lg>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="3" cert="0.9975" rhyme="bz">Y-esto dito, o bon d'o vello</l>
+              <l met="2 5 7" enjamb="4" cert="0.9952" rhyme="ca">Calóuse, e estendendo o brazo</l>
+              <l met="4 7" enjamb="4" cert="0.9962" rhyme="bz">Mentres me fita d'esguello,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9867" rhyme="cb">Mostróume foncha, sonora,</l>
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.9984" rhyme="ca">Detrás d'él borbolletando</l>
+              <l met="2 7" enjamb="5" cert="0.9973" rhyme="cb">Xigante locomotora.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="2" cert="0.984" rhyme="cc">Rubindo estonces con modos</l>
+              <l met="2 5 7" enjamb="3" cert="0.996" rhyme="-">D'os sete vagós que leva</l>
+              <l met="4 7" enjamb="3" cert="0.9061" rhyme="cc">Ó derradeiro de todos,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="cd">Tendéume a mau decontado,</l>
+              <l met="1 4 7" enjamb="4" cert="0.9982" rhyme="-">Fíxome entrar e mandóume</l>
+              <l met="4 6 7" metRg="4 7" enjamb="5" cert="0.998" rhyme="cd">Que me asentase ó seu lado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.998" rhyme="ce">Cal can que obedece ó dôno</l>
+              <l met="2 4 7" enjamb="4" cert="0.9977" rhyme="-">Sentéime e vínme entre xentes</l>
+              <l met="4 7" enjamb="5" cert="0.9975" rhyme="ce">Que topenexan c'o sono.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.8819" rhyme="cf">Alá fora, n'o entretanto,</l>
+              <l met="2 5 6 7" metRg="2 5 7" enjamb="4" cert="0.7605" rhyme="-">Erguídal-as maus pr'o ceo,</l>
+              <l met="2 5 7" enjamb="4" cert="0.9981" rhyme="cf">Os mortos, en doce canto:</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9786" rhyme="cg">—”¡De cote honorado sea</l>
+              <l met="2 4 7" enjamb="4" cert="0.9982" rhyme="-">O vello vate—cramaban—</l>
+              <l met="2 4 7" enjamb="5" cert="0.9981" rhyme="cg">Que os patrios eidos recrea!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.9893" rhyme="ch">”Téñao Dios n'o seu agrado;</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="4" cert="0.9982" rhyme="-">E pois vai por lan á Roma,</l>
+              <l met="2 3 7" metRg="2 7" enjamb="5" cert="0.9983" rhyme="ch">¡Que non torne trasquiado!...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="5" cert="0.9933" rhyme="ci">”¡Groria á Añon!—en altas preces,</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="5" cert="0.6055" rhyme="cj">¡Groria á Añon!—berraron todos</l>
+              <l met="1 2 4 6 8" metRg="2 4 6 8" enjamb="5" cert="0.8986" rhyme="ci">¡Groria á Añon!„—por catro veces;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.6584">
+              <l met="2 5 7" enjamb="3" cert="0.988" rhyme="cj">E todos, de novo oindo</l>
+              <l met="4 7" enjamb="5" cert="0.676" rhyme="-">O <seg rend="em">¡racatapran!</seg> d'a caixa,</l>
+              <l met="3 5 7" enjamb="5" cert="0.9979" rhyme="-"><seg rend="em">¡Racatapran!...</seg> fóronse índo.</l>
+            </lg>
+          </lg>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="3" cert="0.6931" rhyme="ck">Pegóu de súpeto un pulo</l>
+              <l met="2 7" enjamb="3" cert="0.9313" rhyme="-">O tren, e con movimentos</l>
+              <l met="2 4 7" enjamb="4" cert="0.9982" rhyme="ck">Primeiramente d'arrulo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="2" cert="0.9959" rhyme="cl">E logo con desatados</l>
+              <l met="3 7" enjamb="2" cert="0.9959" rhyme="-">Epilépticos esforzos</l>
+              <l met="2 7" enjamb="3" cert="0.9859" rhyme="cl">De tigres encadeados,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="4" cert="0.9976" rhyme="cm">Comenzámol-a xornada,</l>
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.971" rhyme="-">Mentres n'o ceo rompe a lua</l>
+              <l met="2 3 7" metRg="2 7" enjamb="5" cert="0.9971" rhyme="cm">Á rir n'unha carcaxada.</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <head>II</head>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9856">
+              <l met="1 4 6 7 8" metRg="1 4 6 8" enjamb="5" cert="0.9982" rhyme="cn">—Mestre Farruco!... ¿Él é certo?</l>
+              <l met="1 2 3 5 7" metRg="1 3 5 7" enjamb="5" cert="0.9984" rhyme="-">¿Tí aquí? ¡Nunca Dios me dera!</l>
+              <l met="2 4 7" enjamb="5" cert="0.998" rhyme="cn">¿Estóu soñando ou desperto?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="5" cert="0.9981" rhyme="cñ">—Inórasme, ¿n’é verdade?</l>
+              <l met="1 5 7" enjamb="3" cert="0.8662" rhyme="-">Trátannos tan porcamente</l>
+              <l met="2 7" enjamb="4" cert="0.9909" rhyme="cñ">Por esa inmortalidade...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.5747" rhyme="co">Y-eso que, déndes que rouco</l>
+              <l met="3 5 7" enjamb="4" cert="0.9984" rhyme="cñ">De cantar, morrin de fame,</l>
+              <l met="1 5 6 7" metRg="1 5 7" enjamb="5" cert="0.9969" rhyme="co">Fúnme repoñendo un pouco.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="5" cert="0.9981" rhyme="cp">—De fame?—Sí, meu querido.</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.9615" rhyme="-">—¿Tí, autor d’os <seg rend="em">himnos</seg> á Patria</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9969" rhyme="cp">Com’outros non teño lído?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 5 7" metRg="1 3 5 7" enjamb="4" cert="0.9977" rhyme="cq">—Foi trance un pouquiño forte;</l>
+              <l met="3 6 7" metRg="3 7" enjamb="4" cert="0.9977" rhyme="-">Pero, queiras que non queiras,</l>
+              <l met="1 2 3 4 6 7" metRg="2 4 7" enjamb="5" cert="0.9888" rhyme="cq">Tí non has ter millor morte...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9976" rhyme="cr">Tal foi o noso saúdo.</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9984" rhyme="-">Añon sorríu tristemente</l>
+              <l met="1 3 5 7" enjamb="5" cert="0.9971" rhyme="cr">Y-eu quedéi pasmado e mudo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.997" rhyme="cs">Volto ó fin d’o meu espanto:</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="3" cert="0.989" rhyme="-">—Mestre—dixen—;por qué causa</l>
+              <l met="2 5 7" enjamb="5" cert="0.9983" rhyme="cs">D’a sorte te layas tanto?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="4" cert="0.9982" rhyme="ct">Se tan mal che foi n’a vida</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="-">Que un ben topache en morrendo,</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9977" rhyme="ct">¿Querías paz máis comprida?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="3" cert="0.9981" rhyme="cu">—¡Ogallá se me deixara</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9984" rhyme="-">N’esa paz dormir de cote,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9979" rhyme="cu">Qu’estonces non me queixara!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.9955" rhyme="cv">Mais, s’ó que dormindo engorda</l>
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="-">Lle vas furgar n’as orellas,</l>
+              <l met="2 5 7" enjamb="5" cert="0.9984" rhyme="cv">¡Verás de que xenio acorda!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9487" rhyme="cw">A min tamen me furgaron...</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="-">¡Quitarme a vida era pouco</l>
+              <l met="3 7" enjamb="5" cert="0.9968" rhyme="cw">Y-hastra o sono me quitaron!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.9965" rhyme="cx">—Ténme intrigado a tua coita</l>
+              <l met="4 7" enjamb="4" cert="0.9983" rhyme="-">E se contarma quixeras,</l>
+              <l met="2 5 7" enjamb="5" cert="0.9982" rhyme="cx">Folgárame.—Pois escoita.</l>
+            </lg>
+          </lg>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="cy">O vate tomóu alento,</l>
+              <l met="2 4 7" enjamb="3" cert="0.986" rhyme="-">Mesóuse a barba, e moulando</l>
+              <l met="4 7" enjamb="4" cert="0.9984" rhyme="cy">Pol-o baixo un xuramento,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 7" metRg="3 7" enjamb="4" cert="0.9981" rhyme="cz">Continóu:—Morto en Castilla,</l>
+              <l met="1 4 7" enjamb="4" cert="0.9759" rhyme="-">Fun d’o hospital para a coba</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="cz">Levado n’unha angarilla.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="2" cert="0.9606" rhyme="da">Un amigo verdadeiro,</l>
+              <l met="2 5 7" enjamb="5" cert="0.9393" rhyme="-">Amparo meu moitas veces,</l>
+              <l met="2 4 7" enjamb="2" cert="0.9834" rhyme="da">O bon Euxenio Monteiro,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.9967" rhyme="db">D’o meu tránsito avisado</l>
+              <l met="1 5 7" enjamb="3" cert="0.9351" rhyme="-">Iba tras d’o meu cadavre</l>
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="5" cert="0.9978" rhyme="db">Máis qu’eu morto e desolado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="3" cert="0.9924" rhyme="dc">De certo qu’él non soubera</l>
+              <l met="2 5 7" enjamb="3" cert="0.9864" rhyme="-">D’a miña final batalla</l>
+              <l met="2 5 7" enjamb="4" cert="0.9955" rhyme="dc">A loita sinistra e fera;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="2 4 5 8" metRg="2 4 8" enjamb="4" cert="0.9982" rhyme="dd">Se d’ela conta eu lle dira,</l>
+              <l met="5 7" enjamb="4" cert="0.9582" rhyme="-">Cal me redimíu d’os foros</l>
+              <l met="2 7" enjamb="5" cert="0.998" rhyme="dd">D’a fame me redimira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9169" rhyme="de">N’a foxa comun collido,</l>
+              <l met="2 5 7" enjamb="4" cert="0.9643" rhyme="df">Cayéu sobre o morto a terra,</l>
+              <l met="2 5 7" enjamb="4" cert="0.9964" rhyme="de">Cayéu sobre a terra o olvido,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="3" cert="0.9967" rhyme="dg">Y-eu, n’aquel silencio manso,</l>
+              <l met="2 5 7" enjamb="3" cert="0.9985" rhyme="df">Gocéi pol-a vez primeira</l>
+              <l met="1 3 7" enjamb="5" cert="0.9857" rhyme="dg">Unha miga de descanso.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.8921" rhyme="dh">D’él n’a incosciente delicia</l>
+              <l met="2 7" enjamb="3" cert="0.9978" rhyme="-">Estaba, cando entre sonos</l>
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="dh">Sentin mentarme en Galicia,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="5 7" enjamb="3" cert="0.9982" rhyme="di">E por permisión d’o alto</l>
+              <l met="1 4 7" enjamb="3" cert="0.9985" rhyme="-">Fun dend’a Corte hastr’Ourense,</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="5" cert="0.9978" rhyme="di">Com’unha lebre, d’un salto.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="3" cert="0.9865" rhyme="dj">N’unha rua solitaria</l>
+              <l met="2 5 7" enjamb="3" cert="0.9947" rhyme="-">Paréime: reunida en xunta</l>
+              <l met="4 7" enjamb="2" cert="0.9924" rhyme="dj">A mocedá literaria,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9498" rhyme="dk">D’a miña morte doída</l>
+              <l met="2 4 7" enjamb="2" cert="0.9956" rhyme="-">Propúñame honras, proposta</l>
+              <l met="2 7" enjamb="5" cert="0.9983" rhyme="dk">Por todos adimitida.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.4685" rhyme="dl">¿Por todos dixen? Pois minto,</l>
+              <l met="2 4 7" enjamb="3" cert="0.778" rhyme="-">D’a casa en que esto pasaba</l>
+              <l met="3 7" enjamb="3" cert="0.9952" rhyme="dl">Persentóuse n’o recinto</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9806">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.998" rhyme="dm">Un home, e en berrando: ”Nego</l>
+              <l met="2 4 5 7 9" metRg="2 4 7 9" enjamb="4" cert="0.7749" rhyme="-">O meu sufraxo á ese herexe„</l>
+              <l met="2 3 4 5 6 7" metRg="2 4 7" enjamb="5" cert="0.9963" rhyme="dm">Calóuse... Ese home era un crego.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="5" cert="0.9981" rhyme="dn">—¡Celo quizáis!...—Non, cubisa.</l>
+              <l met="2 4 7" enjamb="4" cert="0.9454" rhyme="dñ">¡Negóume as preces, coidando</l>
+              <l met="1 4 7" enjamb="5" cert="0.9983" rhyme="dn">Non lle pagaran a misa!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9978" rhyme="do">Xusto castigo d’o ceo,</l>
+              <l met="2 3 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9977" rhyme="dñ">Que fai d’un réprobo un santo</l>
+              <l met="2 4 5 6 7" metRg="2 4 7" enjamb="5" cert="0.6447" rhyme="do">E troca un xuez n’un reo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9981" rhyme="dp">Ise home, que a morte ampara,</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="4" cert="0.9983" rhyme="dq">Pídeme oxe a oracion mesma</l>
+              <l met="1 3 7" enjamb="5" cert="0.997" rhyme="dp">Que él en vida me negara.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9853" rhyme="dq">Y-Añon dobrando a cabeza</l>
+              <l met="2 5 7" enjamb="2" cert="0.993" rhyme="-">Gardóu a autitú piadosa</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9981" rhyme="dq">D’unha alma que sofre e reza,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9965" rhyme="dr">E vinlle a mirada franca</l>
+              <l met="2 4 7" enjamb="4" cert="0.9972" rhyme="-">Desfeita en bágoas qu’escorren</l>
+              <l met="2 5 7" enjamb="5" cert="0.9978" rhyme="dr">Mollándolle a barba branca.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="5" cert="0.9974" rhyme="ds">¿Choraba de certo, óu ría?</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.998" rhyme="-">Quen a Añon non conecese,</l>
+              <l met="3 7" enjamb="4" cert="0.9977" rhyme="ds">Dudaría... dudaría...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="1 3 4 5 8" metRg="1 3 5 8" enjamb="3" cert="0.9271" rhyme="dt">—Vel’ahí tés—ende acabando</l>
+              <l met="2 4 7" enjamb="3" cert="0.8745" rhyme="-">Tornóu—porque eu me queixaba</l>
+              <l met="2 5 7" enjamb="4" cert="0.998" rhyme="dt">D’a falta de paz en que ando;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 7" metRg="2 7" enjamb="4" cert="0.8267" rhyme="du">Pois déndesd’esa aventura</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.998" rhyme="-">Non podo topar sosego</l>
+              <l met="2 7" enjamb="5" cert="0.9962" rhyme="du">N’a calma d’a sepoltura.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="3" cert="0.9981" rhyme="dv">—Dí, y agora ¿en qué s’emprea</l>
+              <l met="1 4 7" enjamb="3" cert="0.9982" rhyme="-">Tua autividade?—Elixéume</l>
+              <l met="4 7" enjamb="4" cert="0.998" rhyme="dv">Por capitan a <seg rend="em">Estadea</seg>,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="4" cert="0.9982" rhyme="dw">E vou d’ela acompañado,</l>
+              <l met="3 7" enjamb="2" cert="0.9948" rhyme="-">Ensinándolle os camiños</l>
+              <l met="2 4 7" enjamb="5" cert="0.9972" rhyme="dw">D’a vida ó que anda estraviado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 6 7" metRg="1 3 7" enjamb="5" cert="0.998" rhyme="dx">—¿Non está en pena tua xente?</l>
+              <l met="1 2 7" metRg="2 7" enjamb="3" cert="0.9777" rhyme="-">—Non: esa miña <seg rend="em">Compaña</seg></l>
+              <l met="1 3 7" enjamb="5" cert="0.9981" rhyme="dx">É a d’os santos d’Oucidente.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.6584">
+              <l met="2 3 7" metRg="2 7" enjamb="2" cert="0.9059" rhyme="-">Viriato, ise patriotismo,</l>
+              <l met="3 4 6 7" metRg="3 7" enjamb="2" cert="0.9344" rhyme="-">Prisciliano, ise bon senso,</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="2" cert="0.9933" rhyme="dy">María Pita, ise heroismo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 6 7" metRg="2 5 7" enjamb="2" cert="0.9725" rhyme="dz">Macías, o amor mal pago,</l>
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.4154" rhyme="-">Feixóo, a cencia perseguida,</l>
+              <l met="2 5 7" enjamb="5" cert="0.9513" rhyme="dz">Vesteiro, d’a fe o estrago;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.9979" rhyme="dy">Ises compatriotas nosos,</l>
+              <l met="4 7" enjamb="4" cert="0.9945" rhyme="-">Que en procesion me seguiron</l>
+              <l met="3 7" enjamb="4" cert="0.9974" rhyme="dy">Despedíndome chorosos,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.9982" rhyme="dz">Todos ises y-outros tantos</l>
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="-">Que non canoniza a igrexa,</l>
+              <l met="1 5 7" enjamb="5" cert="0.9976" rhyme="dz">Sonche os verdadeiros santos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="3" cert="0.9982" rhyme="ea">—¿Santos e non van contigo</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9976" rhyme="-">A Roma?—Non lles fai falla</l>
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9241" rhyme="ea">Porque non temen castigo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="5" cert="0.996" rhyme="dz">—¿Logo estamos rodeados?...</l>
+              <l met="1 4 7" enjamb="3" cert="0.9979" rhyme="-">—D’unha gavilla de créntes,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9982" rhyme="dz">N’o tren d’os <seg rend="em">Sete Pecados.</seg></l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.998" rhyme="eb">A tal escoitar, a orella</l>
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="dz">Zombóume e colléume o espanto</l>
+              <l met="3 5 7" enjamb="5" cert="0.9974" rhyme="eb">Que entr’os lobos sinte a obella.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="2" cert="0.6766" rhyme="ec">E páledo como a morte</l>
+              <l met="1 3 5 7" enjamb="3" cert="0.8747" rhyme="ed">Véndome Añon—¿Qué che pasa</l>
+              <l met="4 5 7" metRg="4 7" enjamb="5" cert="0.9947" rhyme="ec">Pra te poñer d’esa sorte?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 6 7" metRg="1 3 5 7" enjamb="4" cert="0.9967" rhyme="ed">Díxome; y-eu:—Non é nada,</l>
+              <l met="3 7" enjamb="4" cert="0.9972" rhyme="-">Repriquéille—pero coido</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9975" rhyme="ed">Que hemos ter mala xornada.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.5215" rhyme="ee">—¿Levas a muller?—De parto</l>
+              <l met="2 5 7" enjamb="3" cert="0.9928" rhyme="-">Deixéina n’a casa.—¿Levas</l>
+              <l met="2 4 5 6 7" metRg="2 4 7" enjamb="5" cert="0.9975" rhyme="ee">Diñeiro?—Non teño un carto.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="5" cert="0.9963" rhyme="ef">—¿Fas conta d’herdar?—Apuros.</l>
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="5" cert="0.9971" rhyme="-">—¿Tés boa sona?—D’o peorciño.</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9978" rhyme="ef">—Boh! Enton estamos seguros.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="2" cert="0.9952" rhyme="eg">—¡Soségate, home! Entr’un groso</l>
+              <l met="2 7" enjamb="3" cert="0.9599" rhyme="-">Exército de romeiros,</l>
+              <l met="1 4 7" enjamb="5" cert="0.9984" rhyme="eg">Temes ladrós? ¡Vanidoso!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9982" rhyme="eh">¿Qué pode haber que t’escoza</l>
+              <l met="5 7" enjamb="3" cert="0.9944" rhyme="-">Se nin tan siquera levas</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="5" cert="0.9977" rhyme="eh">Bulsa chea óu muller moza?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9975" rhyme="ei">—¿Pero esta xente é tan mala?</l>
+              <l met="3 5 7" enjamb="5" cert="0.9975" rhyme="eh">—Escelente. ¡Vaiche boa!</l>
+              <l met="1 5 7" enjamb="5" cert="0.9979" rhyme="ei">Xusga pol-a d’esta sala.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="4" cert="0.998" rhyme="ej">—¿Quén son?—Sonche os Preguizeiros,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9979" rhyme="-">Que vindo tarde ó traballo</l>
+              <l met="1 4 7" enjamb="5" cert="0.9983" rhyme="ej">Queren cobrar os primeiros.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9983" rhyme="ek">Sonche os que gustan d’as troitas,</l>
+              <l met="5 7" enjamb="4" cert="0.9952" rhyme="el">E como lles gustan tentan</l>
+              <l met="2 4 7" enjamb="5" cert="0.9973" rhyme="ek">Pescar co’as bragas enxoitas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 4 5 7" metRg="1 3 5 7" enjamb="5" cert="0.9966" rhyme="em">—Ahí tes Mella, un mal letrado.</l>
+              <l met="2 4 7" enjamb="5" cert="0.9972" rhyme="el">—De xuez botóume á cadea.</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9982" rhyme="em">—Pois por eso é maxistrado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9806">
+              <l met="2 3 5 9" metRg="2 5 9" enjamb="5" cert="0.9958" rhyme="EN">—Ahí tes Cesáreo Rodrigo.</l>
+              <l met="1 3 7" enjamb="5" cert="0.9956" rhyme="-">—Sendo bispo escomulgóume.</l>
+              <l met="2 3 7" metRg="2 7" enjamb="5" cert="0.998" rhyme="en">—Será Papa, meu amigo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9914" rhyme="eñ">E por seus nomes chamando</l>
+              <l met="3 5 7" enjamb="4" cert="0.9955" rhyme="-">A cada un, foime o Mestre</l>
+              <l met="1 3 7" enjamb="2" cert="0.4244" rhyme="eñ">Moitas xentes persentando,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.9977" rhyme="eo">D’esas que, n’a humana liza</l>
+              <l met="3 5 7" enjamb="4" cert="0.9981" rhyme="-">Á facer o ben chamadas,</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9961" rhyme="eo">Fan sempre o mal... por priguiza.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9983" rhyme="ep">Añon quedóuse calado;</l>
+              <l met="2 5 7" enjamb="2" cert="0.8377" rhyme="-">Erguéuse, choscóume o ollo</l>
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.9857" rhyme="ep">E d’o meu brazo agarrado,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9572" rhyme="eq">Por un pasadizo interno</l>
+              <l met="2 5 7" enjamb="3" cert="0.97" rhyme="-">Levóume ó vagon segundo,</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="5" cert="0.9977" rhyme="eq">Círcolo d’un novo <seg rend="em">Inferno.</seg></l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <head>III</head>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="7" enjamb="3" cert="0.9945" rhyme="er">Mentres á nosa visita</l>
+              <l met="1 5 7" enjamb="3" cert="0.9948" rhyme="-">Dábamos comenzo, a máquena</l>
+              <l met="1 4 7" enjamb="4" cert="0.9967" rhyme="er">Roda furiosa e crepita</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.7239" rhyme="es">Y-a través d’unha vidreira</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9838" rhyme="-">Ollando, vin que xa tíñamos</l>
+              <l met="4 7" enjamb="5" cert="0.9663" rhyme="es">Atravesado a fronteira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.9344" rhyme="et">D’os carrís por ambos lados</l>
+              <l met="2 4 7" enjamb="3" cert="0.9966" rhyme="-">A vella terra d’as Galias</l>
+              <l met="1 4 7" enjamb="4" cert="0.998" rhyme="et">Ergue os petoutos nevados</l>
+            </lg>
+            <lg type="tercerilla" cert="0.8251">
+              <l met="4 7" enjamb="3" cert="0.9955" rhyme="eu">Y-en aldraxante palique</l>
+              <l met="1 5 7" enjamb="5" cert="0.9782" rhyme="-">Dínnos ó pasar as xentes:</l>
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="5" cert="0.9983" rhyme="eu">
+                <seg rend="em">Bon jour, messieurs fanatiques.</seg>
+              </l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="4" cert="0.9354" rhyme="ev">Alritado á tal esceso,</l>
+              <l met="2 3 7" metRg="2 7" enjamb="5" cert="0.9963" rhyme="-">Queixéime á Añon d’o saúdo.</l>
+              <l met="1 3 4 5 7" metRg="1 3 5 7" enjamb="4" cert="0.9982" rhyme="ev">Dixo:—Pois eche un progreso;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.9977" rhyme="ew">Que en non moi lexanos prazos</l>
+              <l met="2 4 7" enjamb="3" cert="0.9976" rhyme="-">O tren francés recibíase</l>
+              <l met="3 7" enjamb="5" cert="0.9984" rhyme="ew">En España á trabucazos.</l>
+            </lg>
+          </lg>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.997" rhyme="ex">N’esto n’o vagon segundo</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="3" cert="0.9972" rhyme="ey">Entramos; sai d’alá dentro</l>
+              <l met="1 2 7" metRg="2 7" enjamb="4" cert="0.998" rhyme="ex">Un cheiro tan nauseabundo</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9647" rhyme="ez">Que, non querendo asfisiado</l>
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="ey">Morrer, busquéi o moqueiro,</l>
+              <l met="3 7" enjamb="5" cert="0.9981" rhyme="ez">Pero... ¡tíñanm-o roubado!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9972" rhyme="fa">—Non pases d’a porta, tente—</l>
+              <l met="4 7" enjamb="5" cert="0.6215" rhyme="-">Acrecentóume o poeta—</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9982" rhyme="fa">D’a Envidia estás frente a frente</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.963" rhyme="fb">E conven que non te colla</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.9883" rhyme="-">Por diante: este mónstro vive</l>
+              <l met="2 7" enjamb="5" cert="0.9978" rhyme="fb">Somentes d’o que desolla.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9846" rhyme="fc">Agradecido ó consello</l>
+              <l met="2 4 7" enjamb="4" cert="0.9979" rhyme="fd">Paréime e púxenme á escoita</l>
+              <l met="2 5 7" enjamb="4" cert="0.9984" rhyme="fc">Por non desgustar ó vello,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9954" rhyme="fe">Chegando hastra min, sombría,</l>
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.9983" rhyme="fd">Entr’aquel tafo que afoga</l>
+              <l met="1 3 7" enjamb="5" cert="0.9975" rhyme="fe">Unha estraña algarabía.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.9883" rhyme="ff">Anque a desputa era brava,</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9722" rhyme="-">Caín n’a conta ben logo</l>
+              <l met="3 7" enjamb="4" cert="0.9978" rhyme="ff">Que d’as letras se trataba</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="5 7" enjamb="4" cert="0.9983" rhyme="fg">E como d’as letras vivo</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.9983" rhyme="-">Dínme á axexar de tal sorte</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.998" rhyme="fg">Que esto collin que aquí escribo:</l>
+            </lg>
+          </lg>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 7" enjamb="5" cert="0.5868" rhyme="fh">—Dígame, miña señora:</l>
+              <l met="1 2 6 7" metRg="2 7" enjamb="3" cert="0.9986" rhyme="-">¿É certo que n’a sua terra</l>
+              <l met="2 5 7" enjamb="5" cert="0.9978" rhyme="fh">Renace a poesía agora?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.9981" rhyme="fi">—Boubas que ceiban ó vento</l>
+              <l met="1 5 7" enjamb="5" cert="0.9795" rhyme="-">Catro soñadores tolos...</l>
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="5" cert="0.9982" rhyme="fi">¡Non ll’hai tal renacemento!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 6 7" metRg="1 4 7" enjamb="3" cert="0.6317" rhyme="fj">—Non haberá; mais non quita</l>
+              <l met="5 7" enjamb="5" cert="0.9972" rhyme="-">Pra que Castelar o afirme.</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.9972" rhyme="fj">—Xa ll’eu tiréi d’a lavita</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 6 7" metRg="2 5 7" enjamb="3" cert="0.9969" rhyme="fk">En certa acasion... ¡Ten gracia</l>
+              <l met="1 5 7" enjamb="3" cert="0.9982" rhyme="-">Eso de chamar poetas</l>
+              <l met="1 3 7" enjamb="5" cert="0.9982" rhyme="fk">Á esas rans d’a democracia!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="5" cert="0.5986" rhyme="fl">—Non me maltrate ó grande home...</l>
+              <l met="1 3 7" enjamb="3" cert="0.996" rhyme="fk">¡Él, ó fin, n’as apuradas</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="5" cert="0.9978" rhyme="fl">É o que n’os da un pouco nome!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="2" cert="0.9838" rhyme="fm">D’alguén sei que, tras de rirse</l>
+              <l met="1 4 7" enjamb="4" cert="0.9984" rhyme="-">D’íl e d’os seus ideales,</l>
+              <l met="3 7" enjamb="3" cert="0.8836" rhyme="fm">Cando quixo redemirse</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9981" rhyme="fn">D’o olvido, sentóuno á mesa,</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="3" cert="0.9861" rhyme="-">Fíxo-o falar... y-á eso debe</l>
+              <l met="2 5 7" enjamb="5" cert="0.9894" rhyme="fn">Valer o que val e pesa.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9981" rhyme="fñ">—S’eso que dí vai comigo,</l>
+              <l met="1 2 3 6 7" metRg="1 3 7" enjamb="5" cert="0.9935" rhyme="-">Mente. Eu brillo con luz propia.</l>
+              <l met="1 3 5 7" enjamb="5" cert="0.9977" rhyme="fñ">—Morra o conto...—¡Mente, digo!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="4" cert="0.9983" rhyme="fo">Y-en demostra de que mente,</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="2" cert="0.5109" rhyme="-">Faga o favor de ler ise</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="5" cert="0.9967" rhyme="fo">Tomo, e despois escarmente.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="3" cert="0.9982" rhyme="fp">E de súpeto escoitando</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9979" rhyme="-">Un tumbo, baixéi os ollos</l>
+              <l met="2 5 7" enjamb="3" cert="0.9829" rhyme="fp">E vin á meus pes, rolando,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9969" rhyme="fq">Un libro d’a nova escola</l>
+              <l met="2 5 7" enjamb="4" cert="0.9949" rhyme="-">Que cheira á Carulla ás légoas</l>
+              <l met="2 5 7" enjamb="5" cert="0.9966" rhyme="fq">E fede qu’apesta á Zola.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="2" cert="0.639" rhyme="fr">—¿Convencéuse?—Estóu ferido</l>
+              <l met="4 6 7" metRg="4 7" enjamb="4" cert="0.9983" rhyme="-">Pol-o argomento, que é forte,</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9979" rhyme="fr">Mais non estóu convencido.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.9984" rhyme="fs">Eu sosteño, e trayo probas,</l>
+              <l met="3 5 7" enjamb="3" cert="0.9959" rhyme="ft">Que Galicia esperta; díga-o</l>
+              <l met="2 5 7" enjamb="5" cert="0.9967" rhyme="fs">A autora d’as <seg rend="em">Follas Novas.</seg></l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="5" cert="0.9976" rhyme="fu">—¡Valente choromiqueira!</l>
+              <l met="2 4 7" enjamb="3" cert="0.998" rhyme="ft">Poetas d’ese feitío</l>
+              <l met="1 4 7" enjamb="5" cert="0.9983" rhyme="fu">Cómpranse á centos n’a feira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 5 7" metRg="2 4 7" enjamb="3" cert="0.9943" rhyme="fv">Fai anos que un mala peza</l>
+              <l met="1 4 7" enjamb="4" cert="0.9983" rhyme="-">Quixo coröala en vida</l>
+              <l met="1 3 7" enjamb="5" cert="0.9844" rhyme="fv">Y-eu tiréillo d’a cabeza.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.7923" rhyme="fw">—Agora comprendo o gusto</l>
+              <l met="5 7" enjamb="4" cert="0.9981" rhyme="-">Con que lle rezóu pol-a alma...</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="5" cert="0.9975" rhyme="fw">—Honrar ós mortos é xusto.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9982" rhyme="fx">—Ese deber todos temos;</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9953" rhyme="-">Pero inda máis xusto hacho</l>
+              <l met="2 4 7" enjamb="5" cert="0.998" rhyme="fx">Que ós vivos non deshonremos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="3" cert="0.9604" rhyme="fy">Mais a ilustre padronesa</l>
+              <l met="2 4 7" enjamb="4" cert="0.9978" rhyme="-">Deixando, pois hastra coido</l>
+              <l met="4 7" enjamb="4" cert="0.9984" rhyme="fy">Que de mental-a lle pesa,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.997" rhyme="fz">Diga e perdoe: ¿ises vates</l>
+              <l met="2 4 7" enjamb="3" cert="0.9926" rhyme="-">Que mostran tantos alentos</l>
+              <l met="4 7" enjamb="3" cert="0.7887" rhyme="fz">Para os modernos combates;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="5" cert="0.9463" rhyme="ga">Ises Novos e Labartas,</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.998" rhyme="-">Ises Lagos, esas pelras</l>
+              <l met="2 5 7" enjamb="4" cert="0.7787" rhyme="ga">Que surxen á luz en sartas;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 6 7" metRg="1 7" enjamb="2" cert="0.9952" rhyme="gb">Esa xeneración nova</l>
+              <l met="3 7" enjamb="5" cert="0.6653" rhyme="-">De parleiros rousinoles?...</l>
+              <l met="1 5 7" enjamb="5" cert="0.9976" rhyme="gb">—Cantan... como Xan d’a Coba.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 6 7" metRg="2 5 7" enjamb="5" cert="0.9977" rhyme="gc">Non quixen oïr máis nada.</l>
+              <l met="1 5 7" enjamb="4" cert="0.9782" rhyme="-">—Vámonos, roguéille ó Mestre,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9978" rhyme="gc">¡Óu fago unha xudiada!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 6 7" metRg="4 7" enjamb="2" cert="0.9935" rhyme="gd">Y-atravesando aquel triste</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9978" rhyme="-">Lugar, cobil d’unha fera</l>
+              <l met="2 5 7" enjamb="4" cert="0.9984" rhyme="gd">Que á nadia á seu par resiste,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9965" rhyme="ge">Mentres c’o a rabia maúla,</l>
+              <l met="2 7" enjamb="2" cert="0.9911" rhyme="gf">Metímonos n’o terceiro</l>
+              <l met="4 7" enjamb="5" cert="0.9768" rhyme="ge">Departamento—o d’a Gula.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.9958" rhyme="gg">—Antes d’entrar—con amargo</l>
+              <l met="2 5 7" enjamb="4" cert="0.7906" rhyme="gf">Acento, indicóume o vello—</l>
+              <l met="2 4 7" enjamb="4" cert="0.9978" rhyme="gg">Que teñas calma che encargo;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 5 7" metRg="3 5 7" enjamb="4" cert="0.998" rhyme="gh">Por que vas ver cousas tales</l>
+              <l met="4 7" enjamb="3" cert="0.9982" rhyme="gi">Que nin n’as noites de febre</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9983" rhyme="gh">Tes soñado outras iguales.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9982" rhyme="gj">A fame negra aquí mora;</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="2" cert="0.9912" rhyme="gi">Vai con tento, que o seu dente</l>
+              <l met="1 4 7" enjamb="5" cert="0.9935" rhyme="gj">Vivos e mortos devora.</l>
+            </lg>
+          </lg>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="2" cert="0.9718" rhyme="gk">Entréi n’o vagon, e diante</l>
+              <l met="2 5 7" enjamb="2" cert="0.578" rhyme="-">De min persentóuse a escena</l>
+              <l met="1 3 7" enjamb="5" cert="0.998" rhyme="gk">Máis atroz e repunante.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9721" rhyme="gl">Monton de frades noxentes</l>
+              <l met="2 4 7" enjamb="2" cert="0.9938" rhyme="-">Ouscenos, crasos, cebados,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9047" rhyme="gl">De longas uñas e dentes,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9929" rhyme="gm">Con rudo ranxer de moas</l>
+              <l met="1 4 7" enjamb="4" cert="0.9298" rhyme="-">Botan a parva, engulindo</l>
+              <l met="2 5 7" enjamb="5" cert="0.9983" rhyme="gm">Cal torpes serpentes bóas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.606" rhyme="gn">Chocóume d’a xente aquela</l>
+              <l met="3 7" enjamb="4" cert="0.9977" rhyme="-">A feroz voracidade</l>
+              <l met="1 3 7" enjamb="4" cert="0.998" rhyme="gn">Qu’érgue o estómago de vel-a</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="4" cert="0.9983" rhyme="gñ">Y-espricarm-a non sabía</l>
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.9976" rhyme="go">Cando oín que un d’os viaxeiros</l>
+              <l met="3 7" enjamb="4" cert="0.9982" rhyme="gñ">Convidándome dicía:</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.8725" rhyme="gp">—¿Quérme acompañar? Sin gana</l>
+              <l met="1 4 7" enjamb="5" cert="0.9978" rhyme="go">Cómesell’esto.—¿E qué é eso?</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9952" rhyme="gp">—Un pouco de carne humana</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 7" enjamb="4" cert="0.9983" rhyme="gq">—Mesmo de xunt’a rileira;</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="2" cert="0.9817" rhyme="-">Nunca sayo sin un tôro</l>
+              <l met="3 7" enjamb="5" cert="0.9974" rhyme="gq">De Murguía n’a fiambreira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9975" rhyme="gr">—Mercé, non levo apetito.</l>
+              <l met="2 5 7" enjamb="3" cert="0.9961" rhyme="-">—Matámolo á paus nantronte</l>
+              <l met="1 4 7" enjamb="5" cert="0.9984" rhyme="gr">¡Y-elle bocado esquisito!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9915" rhyme="gs">Non ben houbo iste acabado</l>
+              <l met="2 3 6 7" metRg="2 7" enjamb="3" cert="0.9935" rhyme="-">Saltóu outro:—Ó señor halle</l>
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9979" rhyme="gs">De gustar máis o pescado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.9985" rhyme="gt">Se así for, por sorte, apreixe</l>
+              <l met="1 4 7" enjamb="2" cert="0.994" rhyme="-">Un bocadiño siquera</l>
+              <l met="3 5 6 7" metRg="3 5 7" enjamb="5" cert="0.9973" rhyme="gt">De Manuel Anxel...—¡Bon peixe!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="gu">—D’a Cruña cayéu n’a praya:</l>
+              <l met="1 4 7" enjamb="2" cert="0.832" rhyme="-">Úsanse alí unhas traíñas</l>
+              <l met="3 4 7" metRg="3 7" enjamb="4" cert="0.9947" rhyme="gu">D’onde non s’ergue o que caya...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9966" rhyme="gv">Y-así, pra min estendendo</l>
+              <l met="2 5 7" enjamb="4" cert="0.9984" rhyme="-">Anacos d’o seu almorzo,</l>
+              <l met="1 3 7" enjamb="3" cert="0.9979" rhyme="gv">Todos fóronme ofrecendo</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="2" cert="0.9964" rhyme="gw">Con crianza e fidalguía</l>
+              <l met="2 5 7" enjamb="2" cert="0.9942" rhyme="gv">Talladas de Oxea, Vicetto,</l>
+              <l met="1 4 7" enjamb="3" cert="0.6454" rhyme="gw">Lamas, Pondal, Rosalía...</l>
+            </lg>
+          </lg>
+          <lg type="stanza">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="gx">Mirando aquiles horrores,</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="3" cert="0.9944" rhyme="-">Vendo qué trato merecen</l>
+              <l met="3 7" enjamb="3" cert="0.8385" rhyme="gx">Os artistas y-escritores,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="4" cert="0.995" rhyme="gy">Suspiréi con triste xesto:</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="3" cert="0.9903" rhyme="-">¡Pardiola! ¡Non val a pena</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="gy">D’amar a patria pra esto!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 6 7" metRg="2 7" enjamb="4" cert="0.9984" rhyme="gz">Atento Añon ó meu dito</l>
+              <l met="1 2 5 6 7" metRg="2 5 7" enjamb="3" cert="0.9908" rhyme="-">—Ten conta, ouserbóu, ten conta</l>
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="gz">Con non alzarel-o grito;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9651" rhyme="ha">Que se esta xente soubera</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9174" rhyme="-">Quen eres tí, que a censuras...</l>
+              <l met="1 3 7" enjamb="5" cert="0.9981" rhyme="ha">¡Non ch’arrendo a que ch’espera!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="2" cert="0.9852" rhyme="hb">¿Coidabas outra caricia</l>
+              <l met="2 5 7" enjamb="3" cert="0.9758" rhyme="-">Outer d’a que outemos todos,</l>
+              <l met="2 7" enjamb="5" cert="0.9977" rhyme="hb">D’os críticos de Galicia?...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.997" rhyme="hc">Pois, meu amante, vai vendo...</l>
+              <l met="1 5 6 7" metRg="1 5 7" enjamb="4" cert="0.9982" rhyme="-">Y-Añon amostróume un frade</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9974" rhyme="hc">Que iba os meus osos roendo.</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <head>IV</head>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="2" cert="0.9939" rhyme="hd">A tal mirar, sentin noxo</l>
+              <l met="2 4 7" enjamb="4" cert="0.9981" rhyme="hc">De ter nascido gallego,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="hd">E d’odio e cólara roxo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="2" cert="0.9957" rhyme="he">Xuréi desquites croeles</l>
+              <l met="2 4 7" enjamb="4" cert="0.9792" rhyme="-">D’aquiles mónstros e quixen</l>
+              <l met="1 5 7" enjamb="5" cert="0.9927" rhyme="he">Irme a puntapés contr’eles.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.9956" rhyme="hf">D’esta arrautada cativa</l>
+              <l met="2 7" enjamb="3" cert="0.9905" rhyme="-">Libréime logo, rompendo</l>
+              <l met="3 5 7" enjamb="5" cert="0.9975" rhyme="hf">A chorar a bágoa viva.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.9982" rhyme="hg">Non sintía os propios axes:</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9965" rhyme="-">Pr’os que ten limpa a concencia,</l>
+              <l met="1 4 7" enjamb="5" cert="0.9984" rhyme="hg">Vítores son os ultraxes.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9972" rhyme="hh">O qu’eu de veras sintía</l>
+              <l met="1 3 5 7" enjamb="3" cert="0.9979" rhyme="-">Era ver d’aquela sorte</l>
+              <l met="1 4 7" enjamb="4" cert="0.9981" rhyme="hh">Homes de tanta valía,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9467" rhyme="hi">Qu’inda nacendo n’o mouro,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9824" rhyme="-">N’o mouro foran alzados</l>
+              <l met="5 7" enjamb="5" cert="0.9984" rhyme="hi">Sobre pedestrales d’ouro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="5" cert="0.8685" rhyme="hj">¡Qué estrañeza! ¡Qué castigo,</l>
+              <l met="2 4 7" enjamb="4" cert="0.997" rhyme="-">Segar o toxo n’o sulco</l>
+              <l met="4 7" enjamb="4" cert="0.9979" rhyme="hj">Onde semeámol-o trigo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.9982" rhyme="hk">Y-alí, donde a xuventude</l>
+              <l met="3 5 7" enjamb="4" cert="0.9982" rhyme="hl">Agotóu seu nobre esforzo,</l>
+              <l met="1 3 7" enjamb="5" cert="0.9981" rhyme="hk">Ver erguerse a ingratitude!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.733" rhyme="hm">—¡Benia ós que, despois de feita</l>
+              <l met="2 4 7" enjamb="4" cert="0.9973" rhyme="hl">A sembra, pechan os ollos</l>
+              <l met="4 7" enjamb="4" cert="0.9983" rhyme="hm">Sin agardal-a coseita,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.9353" rhyme="hn">Que, o fin, éles son felices</l>
+              <l met="5 7" enjamb="2" cert="0.7232" rhyme="-">Como vos n’a vosa tomba,</l>
+              <l met="1 3 5 7" enjamb="5" cert="0.998" rhyme="hn">Doce Mármol, tenro Elices!...</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="5" cert="0.9823" rhyme="hñ">—¿Logo choras? ¡Tí toleas,</l>
+              <l met="2 3 7" metRg="2 7" enjamb="5" cert="0.9928" rhyme="-">Ladron!—díxome meu guía—</l>
+              <l met="1 4 7" enjamb="4" cert="0.9972" rhyme="hñ">Métete en vidas alleas</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="3" cert="0.9651" rhyme="ho">Mete; verás que bon pelo</l>
+              <l met="1 4 7" enjamb="3" cert="0.886" rhyme="-">Sacas, meu bravo Ouixote,</l>
+              <l met="2 4 7" enjamb="5" cert="0.998" rhyme="ho">En pago d’ese teu celo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.9983" rhyme="hp">Deixa arar o gando, prenda;</l>
+              <l met="3 4 7" metRg="3 7" enjamb="4" cert="0.9983" rhyme="-">Por ninguen póñal-a cara:</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9979" rhyme="hp">Quen teña tenda que a atenda.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.5112" rhyme="hq">Pois de redentor o uficio</l>
+              <l met="4 7" enjamb="4" cert="0.9876" rhyme="-">Sobre d’estar en desuso,</l>
+              <l met="1 3 7" enjamb="5" cert="0.9977" rhyme="hq">Leva sempre ó sacrificio.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.991" rhyme="hr">Vaya, reponte, non chores;</l>
+              <l met="1 5 6 7" metRg="1 5 7" enjamb="2" cert="0.9804" rhyme="-">Eso de chorar é propio</l>
+              <l met="3 7" enjamb="5" cert="0.9975" rhyme="hr">D’as especies inferiores.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9984" rhyme="hs">A cada tempo o qu’estila;</l>
+              <l met="1 5 7" enjamb="3" cert="0.9613" rhyme="-">Y-oxe o corazon humano</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9981" rhyme="hs">Fel, que non bágoas, destila.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.9694" rhyme="ht">Ergue esa cara, resfrega</l>
+              <l met="1 3 7" enjamb="3" cert="0.6148" rhyme="hs">Eses ollos: a morriña</l>
+              <l met="1 4 7" enjamb="4" cert="0.9852" rhyme="ht">É enfermedá que se pega</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.9983" rhyme="hu">Y-a morriña y-os teus versos</l>
+              <l met="1 3 5 7" enjamb="3" cert="0.9939" rhyme="-">Sonche a mesma cousa; dígan-o</l>
+              <l met="1 4 7" enjamb="5" cert="0.998" rhyme="hu">Certos poetiñas perversos.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.9462" rhyme="hv">Y-Añón, turra que te turra</l>
+              <l met="2 4 7" enjamb="4" cert="0.9974" rhyme="-">De min, levóume a rempuxos,</l>
+              <l met="2 5 7" enjamb="3" cert="0.8817" rhyme="hv">Cal can que á loitar s’azurra,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="2" cert="0.9928" rhyme="hw">A un vagon, onde con pía</l>
+              <l met="3 5 7" enjamb="3" cert="0.9984" rhyme="-">Gravedá, mulleres y-homes</l>
+              <l met="2 7" enjamb="5" cert="0.9984" rhyme="hw">Cantaban a letanía.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.9944" rhyme="hx">Un fervor tan verdadeiro</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="5" cert="0.9579" rhyme="-">Vendo:—¿Entre qué xente estamos?—</l>
+              <l met="3 7" enjamb="5" cert="0.9962" rhyme="hx">Perguntéille ó compañeiro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9984" rhyme="hy">Y-él, que xamáis s’adimira:</l>
+              <l met="4 7" enjamb="4" cert="0.9942" rhyme="-">—Entre fauciosos vencidos,</l>
+              <l met="1 4 7" enjamb="5" cert="0.9924" rhyme="hy">Dixo—que estoupan c’o a ira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9692" rhyme="hz">—¿Fauciosos? Semellan crentes,</l>
+              <l met="1 5 7" enjamb="5" cert="0.9901" rhyme="-">Segun a atrición que mostran.</l>
+              <l met="2 4 7" enjamb="5" cert="0.9982" rhyme="hz">—¡Madía! Vénse impotentes.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.7989" rhyme="ia">Dalles en vez de rosarios</l>
+              <l met="2 4 7" enjamb="3" cert="0.9959" rhyme="-">Fusís, e témelles menos</l>
+              <l met="2 4 7" enjamb="5" cert="0.9977" rhyme="ia">Ós lobos máis sanguinarios.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9982" rhyme="ib">Seus rezos sonche disfraces;</l>
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="-">Repara ben n’o que dicen,</l>
+              <l met="2 5 7" enjamb="5" cert="0.9979" rhyme="ib">Verás d’o que son capaces.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9985" rhyme="ic">Fixándome enton n’o canto,</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="3" cert="0.5973" rhyme="-">Notéi non poñen n’o rezo</l>
+              <l met="2 4 7" enjamb="4" cert="0.8211" rhyme="ic">Ningunha virxe nin santo</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.8743" rhyme="id">Y-os ollos baixos e inmovis,</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="3" cert="0.8009" rhyme="ie">Meten un xefe carlista</l>
+              <l met="3 4 6 7" metRg="3 7" enjamb="5" cert="0.9958" rhyme="id">Entre dous <seg rend="em">ora pro nobis.</seg></l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.8021" rhyme="ie">—Arre demo co’a xentiña...</l>
+              <l met="2 5 7" enjamb="5" cert="0.998" rhyme="-">¡Calquera se arrima á ela!—</l>
+              <l met="2 5 7" enjamb="4" cert="0.9984" rhyme="ie">Penséi pol-a conta miña—</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.9921" rhyme="if">Mais s’é tan ruín e dañada</l>
+              <l met="1 3 5 6 7" metRg="1 3 5 7" enjamb="4" cert="0.9971" rhyme="-">Esa tropa:—¿Cómo é, dixen,</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9976" rhyme="if">Cómo é que vai tan calmada?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.835" rhyme="ig">—A Ira verdadeira, enxebre,</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9984" rhyme="-">Nunca muda a cor d’o rosto,</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="5" cert="0.9981" rhyme="ig">Non dá berros, nin pon febre.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.9969" rhyme="ih">Vive n’o peito encollida</l>
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.9977" rhyme="ii">Com’un tigre, e cando salta</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9982" rhyme="ih">D’o salto estroza unha vida.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="ij">Se queres ver onde chega</l>
+              <l met="2 4 7" enjamb="4" cert="0.9979" rhyme="ii">A qu’istes gardan n’a alma</l>
+              <l met="5 7" enjamb="4" cert="0.9982" rhyme="ij">E de que maneira os cega,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.995" rhyme="ik">Escoita... E n’aquel momento</l>
+              <l met="2 4 7" enjamb="3" cert="0.9977" rhyme="-">Parando o tren, abouxóume</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9983" rhyme="ik">Un cramor grande e violento.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="5" cert="0.9983" rhyme="il">
+                <seg rend="em">¡Morra Umberte!¡Viv’o Papa!</seg>
+              </l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9979" rhyme="-">Tal era a voz estrondosa</l>
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9978" rhyme="il">Que de cen gorxas s’escapa.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.8251">
+              <l met="3 7" enjamb="4" cert="0.9981" rhyme="im">Acheguéime á ventanilla</l>
+              <l met="2 5 7" enjamb="3" cert="0.9976" rhyme="-">Y-en terra italiana vínme,</l>
+              <l met="3 7" enjamb="5" cert="0.9974" rhyme="im">N’a estación de Vintimiglia.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="2" cert="0.9897" rhyme="in">—¡Salve, d’antusiasmo cheo</l>
+              <l met="3 4 7" metRg="3 7" enjamb="2" cert="0.9952" rhyme="-">Escraméi—patria sagrada</l>
+              <l met="2 7" enjamb="5" cert="0.9981" rhyme="in">D’o Dante e de Galileo!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="3" cert="0.9953" rhyme="iñ">Feitos polvo y-en anacos</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.9973" rhyme="-">Os teus membros, posta a túneca</l>
+              <l met="2 3 7" metRg="2 7" enjamb="4" cert="0.9877" rhyme="iñ">En cen xirons e buracos;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="4" cert="0.9662" rhyme="io">Os teus fillos perseguidos,</l>
+              <l met="3 7" enjamb="5" cert="0.9064" rhyme="-">Queimados teus patriarcas,</l>
+              <l met="1 4 7" enjamb="4" cert="0.9976" rhyme="io">Todos teus bens recollidos;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9827" rhyme="ip">Ceibados ós catro ventos</l>
+              <l met="2 5 7" enjamb="5" cert="0.9625" rhyme="-">Os osos d’os teus maores,</l>
+              <l met="3 7" enjamb="4" cert="0.8897" rhyme="ip">Afogados teus lamentos;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.8981" rhyme="iq">D’os Papas triste cautiva,</l>
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.9982" rhyme="-">Baixo seus pes sempre morta,</l>
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.9959" rhyme="iq">Pero tamen sempre viva;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="2" cert="0.9932" rhyme="ir">Tí, n’un traballo grorioso</l>
+              <l met="2 4 7" enjamb="4" cert="0.995" rhyme="-">De quince sigros, traballo</l>
+              <l met="3 4 7" metRg="3 7" enjamb="4" cert="0.9934" rhyme="ir">Cal ningun outro espantoso,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.9984" rhyme="is">Recolliche gota a gota</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9981" rhyme="-">Todo o teu sangue vertido,</l>
+              <l met="2 5 7" enjamb="4" cert="0.9962" rhyme="is">E volto en guerreiro o ilota,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="3" cert="0.9972" rhyme="it">Dende a ergástola retache</l>
+              <l met="3 7" enjamb="3" cert="0.9892" rhyme="-">Teus verdugos y-arrumbados</l>
+              <l met="2 7" enjamb="5" cert="0.998" rhyme="it">Liberta te levantache.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.9978" rhyme="iu">Tí, d’os cabalos d’Atila</l>
+              <l met="2 7" enjamb="4" cert="0.9982" rhyme="-">Debaixo d’a ferradura,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="iu">Que canto toca aniquila,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="4" cert="0.9966" rhyme="iv">Recolliche a tua coroa</l>
+              <l met="4 7" enjamb="2" cert="0.9954" rhyme="-">E maldixeche a salvaxe</l>
+              <l met="5 7" enjamb="5" cert="0.9983" rhyme="iv">Civilización teutoa.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.9983" rhyme="iw">Tí, cando por tod’a terra</l>
+              <l met="2 5 7" enjamb="4" cert="0.9765" rhyme="-">O corno feudal soaba</l>
+              <l met="2 5 7" enjamb="4" cert="0.9984" rhyme="iw">Chamando as naciós á guerra,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="3" cert="0.9979" rhyme="ix">Convirtindo en estandarte</l>
+              <l met="2 5 7" enjamb="3" cert="0.9918" rhyme="iy">O vello sudario griego,</l>
+              <l met="3 5 7" enjamb="4" cert="0.8909" rhyme="ix">Proclamache a cencia e o arte;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.8963" rhyme="iz">Y-en tanto que n’un divino</l>
+              <l met="3 5 7" enjamb="3" cert="0.9001" rhyme="iy">Resprandor inunda os ceos</l>
+              <l met="2 5 7" enjamb="5" cert="0.7101" rhyme="iz">O sol de Tomás d’Aquino,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.979" rhyme="ja">O verbo audaz de Xordano</l>
+              <l met="2 5 7" enjamb="2" cert="0.9906" rhyme="jb">Penetra o misterio, oculto</l>
+              <l met="1 5 7" enjamb="4" cert="0.9838" rhyme="ja">Sempre ó pensamento humano,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.7343" rhyme="jc">A forma en Rafael estrala</l>
+              <l met="3 5 7" enjamb="2" cert="0.9951" rhyme="jb">¡Y-hastra a pedra, ó golpe rudo</l>
+              <l met="3 5 7" enjamb="5" cert="0.9984" rhyme="jc">De Miguel Anxele, fala!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 5 7" metRg="3 5 7" enjamb="3" cert="0.9982" rhyme="jd">Dende enton, tí tés d’os povos</l>
+              <l met="3 5 7" enjamb="4" cert="0.524" rhyme="-">O sacreto, tí o candado</l>
+              <l met="2 5 7" enjamb="5" cert="0.9984" rhyme="jd">Y-a chave d’os tempos novos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9954" rhyme="je">¡Ou patria, d’as patrias tempro,</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9957" rhyme="-">Quen d’o teu mal adoleza</l>
+              <l met="1 5 7" enjamb="5" cert="0.9971" rhyme="je">Cúrese c’o teu exempro!...</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9959" rhyme="jf">—Hasme d’ir moi caladiño,</l>
+              <l met="4 6 7" metRg="4 7" enjamb="4" cert="0.998" rhyme="-">Interrompéume aquí o Mestre,</l>
+              <l met="2 7" enjamb="5" cert="0.9983" rhyme="jf">Ou déixote n’o camiño.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9973" rhyme="jg">Ser serio é cousa precisa:</l>
+              <l met="1 2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.7557" rhyme="jf">¿Non ves que cantos t’oíron</l>
+              <l met="3 7" enjamb="5" cert="0.9981" rhyme="jg">Esterníllanse de risa?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="3" cert="0.9981" rhyme="jh">Olla, n’esta nosa edade</l>
+              <l met="1 4 7" enjamb="4" cert="0.9984" rhyme="-">Gustan os cantos d’os cegos,</l>
+              <l met="1 2 7" metRg="2 7" enjamb="5" cert="0.9979" rhyme="jh">Mais non os d’a libertade.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="4" cert="0.9959" rhyme="ji">Y-o conto é que xa debías</l>
+              <l met="2 5 7" enjamb="3" cert="0.9985" rhyme="-">Saber o que tran consigo</l>
+              <l met="1 3 7" enjamb="5" cert="0.8775" rhyme="ji">Esa clas de sinfunías...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="5" cert="0.9983" rhyme="jj">Eu por min que ¡mal pocado!</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9975" rhyme="-">Fun grande amigo d’os servos,</l>
+              <l met="1 4 7" enjamb="5" cert="0.9984" rhyme="jj">Téñoche xa escarmentado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.9761" rhyme="jk">Trinta anos de pita choca,</l>
+              <l met="1 7" enjamb="2" cert="0.9956" rhyme="-">Sempre c’o <seg rend="em">cloc-coto-cloc</seg></l>
+              <l met="4 7" enjamb="4" cert="0.9788" rhyme="jk">D’a libertade n’a boca,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.9975" rhyme="jl">Non che me valeron nada;</l>
+              <l met="2 4 7" enjamb="3" cert="0.9966" rhyme="-">Y-en vez de pitos quitéiche</l>
+              <l met="2 4 7" enjamb="5" cert="0.9981" rhyme="jl">De graxos unha bandada.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="5" cert="0.9958" rhyme="jm">Libertade, patria, adianto...</l>
+              <l met="1 2 7" metRg="2 7" enjamb="3" cert="0.7596" rhyme="-">¡Boh! ¡Déixate de toleiras</l>
+              <l met="1 2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9982" rhyme="jm">Hom! Vai rezar á outro santo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9981" rhyme="jn">Non contes estrelas mortas;</l>
+              <l met="2 4 7" enjamb="3" cert="0.9899" rhyme="-">Que pódia ser que contándoas</l>
+              <l met="2 5 7" enjamb="5" cert="0.9981" rhyme="jn">Che bata a miseria ás portas.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9959" rhyme="jm">Dixo, e d’o vate o sarcasmo</l>
+              <l met="4 7" enjamb="4" cert="0.9935" rhyme="-">Escalafrióume todo</l>
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.9675" rhyme="jm">E d’o meu nobre entusiasmo</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9976" rhyme="jñ">Vin apagarse a enerxía,</l>
+              <l met="3 4 5 7" metRg="3 5 7" enjamb="4" cert="0.644" rhyme="-">Cal se apaga un ferro aceso</l>
+              <l met="3 5 7" enjamb="5" cert="0.9983" rhyme="jñ">Chapuzado en agoa fría.</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <head>V</head>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9843" rhyme="jm">Murchol-os dous y-abismados,</l>
+              <l met="1 5 7" enjamb="3" cert="0.9977" rhyme="-">Puxose de novo en marcha</l>
+              <l met="2 4 7" enjamb="5" cert="0.998" rhyme="jm">O tren d’os <seg rend="em">Sete Pecados</seg>.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9963" rhyme="jñ">A noite á bó andar caía</l>
+              <l met="5 7" enjamb="3" cert="0.9983" rhyme="jm">E d’esparexer tratando</l>
+              <l met="2 7" enjamb="4" cert="0.9717" rhyme="jñ">A miña malencunía,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 7" metRg="3 7" enjamb="4" cert="0.9982" rhyme="jo">Asoméime á unha vidreira</l>
+              <l met="2 5 7" enjamb="3" cert="0.9981" rhyme="-">Y-o cheiro aspiréi que mandan</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="jo">A touza e máil-a silveira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.9971" rhyme="jp">Ráfagas d’os altos cumes,</l>
+              <l met="1 3 7" enjamb="3" cert="0.9981" rhyme="-">¡Cánto enton me gorentaron</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="jp">Os vosos puros perfumes!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9916" rhyme="jq">Gratos perfumes d’a serra,</l>
+              <l met="1 3 7" enjamb="3" cert="0.9972" rhyme="-">¡Cánto enton me recordastes</l>
+              <l met="2 5 7" enjamb="5" cert="0.9983" rhyme="jq">Os cheiros d’a miña terra!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9023" rhyme="jr">N’aquil celaxe promizo</l>
+              <l met="2 4 7" enjamb="3" cert="0.9967" rhyme="-">Que o azul profundo tapaba,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9975" rhyme="jr">N’aquil paisaxe invernizo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 7" metRg="2 7" enjamb="2" cert="0.9945" rhyme="js">Vin algo d’o aterimento</l>
+              <l met="2 4 7" enjamb="4" cert="0.9966" rhyme="jt">D’o meu nativo curruncho</l>
+              <l met="1 3 7" enjamb="5" cert="0.998" rhyme="js">Y-él se foi meu pensamento.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="3" cert="0.9963" rhyme="ju">Mais n’a probe patria miña</l>
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="4" cert="0.9975" rhyme="jt">Son máis tristes os crepúsculos,</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="4" cert="0.9982" rhyme="ju">Eterna dôr alí aniña;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9903" rhyme="jv">Que anque unha grande hermandade</l>
+              <l met="1 4 7" enjamb="4" cert="0.9977" rhyme="-">Hai entre todol-os povos</l>
+              <l met="2 7" enjamb="4" cert="0.9978" rhyme="jv">Que buscan a libertade,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="3" cert="0.9974" rhyme="jw">Pol-a vereda que avanza</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9982" rhyme="-">Cara ós seus nobres destinos,</l>
+              <l met="2 7" enjamb="4" cert="0.9857" rhyme="jw">Perdoando a comparanza,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9934" rhyme="jx">Italia marcha dereita</l>
+              <l met="3 7" enjamb="3" cert="0.9986" rhyme="-">E Galicia trenqueleando</l>
+              <l met="2 4 7" enjamb="5" cert="0.9981" rhyme="jx">Como unha vella tolleita.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.5028" rhyme="jy">Velliña que andas agatas</l>
+              <l met="3 5 7" enjamb="4" cert="0.9983" rhyme="-">Sin que teñas quen t’axude,</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9874" rhyme="jy">¿Cándo has tirar c’o as caxatas</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="5" cert="0.7349" rhyme="jz">Y-airada, valente, forte,</l>
+              <l met="2 4 7" enjamb="2" cert="0.9015" rhyme="-">Porás o pé n’o pescozo</l>
+              <l met="4 7" enjamb="5" cert="0.9976" rhyme="jz">D’os que te firen de morte?...</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="2" cert="0.9943" rhyme="ka">Para atallar a corrente</l>
+              <l met="2 4 7" enjamb="3" cert="0.9969" rhyme="-">D’as miñas negras ideas</l>
+              <l met="2 4 7" enjamb="4" cert="0.9982" rhyme="ka">Paséime a mau pol-a frente,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="2" cert="0.756" rhyme="kb">Y-hachando os dedos lixados</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9626" rhyme="kb">D’un polvo branco e mïudo,</l>
+              <l met="2 5 7" enjamb="4" cert="0.9978" rhyme="kb">Volvínme pra todos lados</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="2" cert="0.9891" rhyme="kc">E vin á Añon n’a faena</l>
+              <l met="4 7" enjamb="3" cert="0.9962" rhyme="-">De peneirar entretido</l>
+              <l met="1 4 7" enjamb="3" cert="0.9906" rhyme="kc">C’unha peneira pequena</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.997" rhyme="kd">Por sobre min un farelo</l>
+              <l met="3 7" enjamb="4" cert="0.9943" rhyme="-">Que me tiña enfarelado</l>
+              <l met="3 7" enjamb="5" cert="0.9945" rhyme="kd">Dende os pes hastr’o cabelo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9984" rhyme="ke">—Olla o que fas, que me lixas</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="4" cert="0.9977" rhyme="-">Y-entrar limpo quero en Roma...</l>
+              <l met="1 3 5 7" enjamb="5" cert="0.9976" rhyme="ke">—S’é por eso, non t’afrixas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9982" rhyme="kf">Outros van máis emporcados</l>
+              <l met="2 3 7" metRg="2 7" enjamb="2" cert="0.9948" rhyme="-">Que tí e sáen que dá vicio</l>
+              <l met="2 7" enjamb="5" cert="0.9981" rhyme="kf">De limpos e de lavados.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.993" rhyme="kg">Leva forrado o caledro</l>
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.9857" rhyme="-">A Cibdá Eterna, escurricha</l>
+              <l met="3 7" enjamb="3" cert="0.9932" rhyme="kg">N’o diñeiro de San Pedro</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9977" rhyme="kh">Toda tua honrada probeza,</l>
+              <l met="4 7" enjamb="2" cert="0.5904" rhyme="-">E volveráste pr’a casa,</l>
+              <l met="1 3 5 7" enjamb="5" cert="0.9946" rhyme="kh">Nobre e santo, n’unha peza.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9439" rhyme="ki">D’algun petrucio gallego</l>
+              <l met="1 2 5 6 7" metRg="2 5 7" enjamb="3" cert="0.9672" rhyme="-">Sei eu que, sin ter un carto</l>
+              <l met="3 5 6 7" metRg="3 5 7" enjamb="4" cert="0.9984" rhyme="ki">Pra mandar tocar á un cego,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 6 7" metRg="2 4 7" enjamb="3" cert="0.9979" rhyme="kj">Pillóu, non sei con qué trapa,</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9972" rhyme="-">Unhas cantas onzas d’ouro,</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9979" rhyme="kj">Fóise á Roma á ver ó Papa</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9441" rhyme="kk">Y-alí, sua orixen caótica</l>
+              <l met="2 4 7" enjamb="3" cert="0.6767" rhyme="-">Perdendo, fíxose ó punto</l>
+              <l met="2 5 7" enjamb="5" cert="0.9954" rhyme="kk">Fidalgo... de raza gótica.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.9981" rhyme="kl">—No, pedricar ben pedricas,</l>
+              <l met="2 4 7" enjamb="4" cert="0.997" rhyme="km">Pero inda non me dixeches</l>
+              <l met="2 4 7" enjamb="5" cert="0.9976" rhyme="kl">Por qué istes polvos m’apricas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.997" rhyme="kn">—Esto que contigo fago</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.9821" rhyme="km">Hate librar, si Dios quere</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9973" rhyme="kn">Y-a Virxe, d’un gran estrago.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="5" cert="0.998" rhyme="kñ">—Pero é fariña ou é sénica?</l>
+              <l met="1 3 5 7" enjamb="3" cert="0.9981" rhyme="km">—Non t’apures: simpremente</l>
+              <l met="1 5 7" enjamb="5" cert="0.9978" rhyme="kñ">Unha precaución hixiénica.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 5 7" metRg="4 7" enjamb="3" cert="0.8888" rhyme="ko">E sin me dar máis resposta</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="4" cert="0.9979" rhyme="-">Añon, sempre d’o meu brazo,</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9984" rhyme="ko">Téndose en pé a moita costa,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9984" rhyme="kp">Entróu comigo de novo</l>
+              <l met="1 4 7" enjamb="3" cert="0.9844" rhyme="-">N’outro vagon ás escuras,</l>
+              <l met="1 4 7" enjamb="5" cert="0.998" rhyme="kp">Negro cal boca de lobo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9975" rhyme="kq">Nada alí drento se vía.</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="2" cert="0.9942" rhyme="-">Tapada a luz por un númaro</l>
+              <l met="2 3 7" metRg="2 7" enjamb="5" cert="0.9976" rhyme="kq">D’a <seg rend="em">Fe,</seg> morta parecía.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9962" rhyme="kr">Mais pol-o que eu escoitaba,</l>
+              <l met="3 7" enjamb="3" cert="0.9964" rhyme="-">Entr’aquela escuridade</l>
+              <l met="1 4 7" enjamb="5" cert="0.9978" rhyme="kr">Gran rebulicio reinaba.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="2" cert="0.9952" rhyme="ks">Sentin solouzos, acentos</l>
+              <l met="3 5 7" enjamb="3" cert="0.9708" rhyme="-">De piedá, ferventes rogos</l>
+              <l met="4 7" enjamb="3" cert="0.9066" rhyme="ks">Entre afogados lamentos,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="5" cert="0.6792" rhyme="kt">Ais de pena e de tenrura,</l>
+              <l met="2 5 7" enjamb="2" cert="0.9965" rhyme="-">Suspiros d’amor y-azoutes</l>
+              <l met="2 5 7" enjamb="5" cert="0.998" rhyme="kt">De maus sobre carne dura.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="4" cert="0.9884" rhyme="ku">—¡Cómo é sabia a Porvidencia,</l>
+              <l met="2 5 7" enjamb="3" cert="0.9954" rhyme="-">Penséi—que me trai o cabo</l>
+              <l met="1 3 7" enjamb="5" cert="0.9984" rhyme="ku">A un lugar de penitencia!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9983" rhyme="kv">Non, non é o mal tan profundo.</l>
+              <l met="1 2 7" metRg="2 7" enjamb="4" cert="0.9948" rhyme="-">¡Inda hai arrepentimento,</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9982" rhyme="kv">Inda hai virtude n’o mundo!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="3" cert="0.9982" rhyme="kw">Y-aconchegando a cabeza</l>
+              <l met="3 4 5 7" metRg="3 5 7" enjamb="4" cert="0.9982" rhyme="-">Pra dormir, pois tiña sono,</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9984" rhyme="kw">Y-o sono é media manteza,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.7948" rhyme="kx">Enterréi todo o cogote</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="3" cert="0.9972" rhyme="-">N’un respaldar suave e quente</l>
+              <l met="4 7" enjamb="5" cert="0.998" rhyme="kx">Como de lan óu nescote.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 4 7" metRg="2 4 7" enjamb="3" cert="0.9975" rhyme="ky">Mais non ben tiña pechado</l>
+              <l met="2 5 7" enjamb="3" cert="0.973" rhyme="-">Os ollos, topéime preso,</l>
+              <l met="3 4 7" metRg="3 7" enjamb="4" cert="0.998" rhyme="ky">D’ambol-os remos travado,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9941" rhyme="kz">Y-en menos tempo que o esprico</l>
+              <l met="2 5 7" enjamb="3" cert="0.9983" rhyme="-">Sentin n’a meixela esquerda</l>
+              <l met="1 2 4 5 6 7" metRg="2 4 7" enjamb="5" cert="0.9959" rhyme="kz">Un roce estraño... Era un bico.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="5" cert="0.9874" rhyme="la">—¡Cóngrio!—berréi—¿quén s’astreve?...</l>
+              <l met="4 6 7" metRg="4 7" enjamb="4" cert="0.7078" rhyme="-">E sin poder facer forzas,</l>
+              <l met="1 5 7" enjamb="4" cert="0.9978" rhyme="la">Frío como a mesma neve,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9985" rhyme="lb">Esconxuréi o enemigo,</l>
+              <l met="2 5 6 7" metRg="2 5 7" enjamb="5" cert="0.9983" rhyme="-">Palpéi y apreséi... ¡qué diaño!</l>
+              <l met="4 5 7" metRg="4 7" enjamb="5" cert="0.6579" rhyme="lb">O que apreséi... non-o digo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9984" rhyme="lc">D’a lámpara n’este istante</l>
+              <l met="2 4 7" enjamb="4" cert="0.9961" rhyme="-">Cayéuse o chau o periódeco</l>
+              <l met="2 5 7" enjamb="3" cert="0.9504" rhyme="lc">Y-ó seu resprandor brilante</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="5" cert="0.9884" rhyme="ld">Vinme—¡á contal-o resisto!—</l>
+              <l met="3 5 7" enjamb="4" cert="0.998" rhyme="-">Entr’os brazos d’unha dona</l>
+              <l met="4 7" enjamb="5" cert="0.997" rhyme="ld">Que me tomaba por Cristo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.996" rhyme="le">Volvendo os ollos en torno,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9981" rhyme="-">N’a miña propia autitude</l>
+              <l met="2 5 7" enjamb="3" cert="0.9959" rhyme="le">Descobrin n’o espacio morno</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.9911" rhyme="lf">Cen beatas e beatos,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9984" rhyme="-">Rufando místicamente</l>
+              <l met="5 7" enjamb="4" cert="0.9969" rhyme="lf">Como n’a xaneira os gatos;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9392" rhyme="lg">Os cuales, volta ás alturas</l>
+              <l met="3 7" enjamb="2" cert="0.9965" rhyme="lh">A mirada compunxida</l>
+              <l met="4 7" enjamb="3" cert="0.9982" rhyme="lg">D’as murillesas figuras</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9862" rhyme="li">En grupos de xeito vario,</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.9678" rhyme="lh">Mais todos en cruz, facían</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9981" rhyme="li">D’aquil lugar un Calvario.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="lj">Eu, que outra tal nunca vira,</l>
+              <l met="4 7" enjamb="4" cert="0.9977" rhyme="-">Adimiréime ás primeiras,</l>
+              <l met="3 7" enjamb="4" cert="0.997" rhyme="lj">Pero, mira que te mira,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="lk">Notando en forza d’olladas</l>
+              <l met="1 3 7" enjamb="4" cert="0.9958" rhyme="-">Que iles fan de crucifixos</l>
+              <l met="1 7" enjamb="4" cert="0.9983" rhyme="lk">Y-elas de crucificadas,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9963" rhyme="ll">E vendo que, ó fin y-ó cabo,</l>
+              <l met="3 7" enjamb="3" cert="0.6327" rhyme="-">Pol-as fendas que s’abrían</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="4" cert="0.9985" rhyme="ll">Non traspasa ningun cravo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9982" rhyme="lm">Peguéi un brinco terribre</l>
+              <l met="2 6 7" metRg="2 7" enjamb="2" cert="0.994" rhyme="-">Y-abrindo por aquel bosque</l>
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.9981" rhyme="lm">De Belfegor paso libre,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="5" cert="0.9965" rhyme="ln">Dixen:—¡Atentade ó demo!</l>
+              <l met="1 3 7" enjamb="5" cert="0.963" rhyme="-">Y-eles:—¡Fóra o alcanforado!</l>
+              <l met="2 4 7" enjamb="5" cert="0.9978" rhyme="ln">Berraron—¡fóra o brasfemo!</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.9978" rhyme="lñ">Añon, que agardaba á porta,</l>
+              <l met="3 5 7" enjamb="5" cert="0.9892" rhyme="-">Perguntóume:—¿Qué hai, meu rolo?</l>
+              <l met="2 4 7" enjamb="5" cert="0.9971" rhyme="lñ">—¿A tí que rayo ch’importa?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9983" rhyme="lo">Repriquéi.—¿Vésme enfadado?</l>
+              <l met="1 2 7" metRg="2 7" enjamb="4" cert="0.9924" rhyme="-">¡Bon modo de agradecerme</l>
+              <l met="3 7" enjamb="5" cert="0.9981" rhyme="lo">O de terte peneirado!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="2 5 7 8" metRg="2 5 8" enjamb="5" cert="0.9968" rhyme="lp">—¿Pra qué me metiche ahí drento?</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.9977" rhyme="-">—¿Pra qué? Pois logoi infrinxiche</l>
+              <l met="2 4 7" enjamb="5" cert="0.9963" rhyme="lp">Cecais algun mandamento?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 5 7" metRg="1 3 5 7" enjamb="4" cert="0.9975" rhyme="lq">—Eu non.—Pois á min m’o debes;</l>
+              <l met="5 7" enjamb="4" cert="0.9705" rhyme="-">Porque s’á pecar chegaras,</l>
+              <l met="1 5 7" enjamb="4" cert="0.984" rhyme="lq">Inda con pecados leves,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9969" rhyme="lr">Non che valeran recetas</l>
+              <l met="2 7" enjamb="3" cert="0.6707" rhyme="-">Humanas pra te curares</l>
+              <l met="4 7" enjamb="5" cert="0.998" rhyme="lr">D’enfermedades... sacretas.</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <head>VI</head>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.654" rhyme="ls">Diante de nós, entramentes,</l>
+              <l met="5 7" enjamb="2" cert="0.9951" rhyme="-">D’o Mediterráneo as olas</l>
+              <l met="1 7" enjamb="2" cert="0.9763" rhyme="ls">Crechas e forforescentes,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="3" cert="0.9843" rhyme="lt">D’a praya dende as areas</l>
+              <l met="1 5 7" enjamb="4" cert="0.9603" rhyme="-">Veñen sobr’o tren que pasa</l>
+              <l met="2 5 7" enjamb="5" cert="0.998" rhyme="lt">Cuspir, de coraxe cheas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="2 4 7" enjamb="3" cert="0.9921" rhyme="lu">Detrás quedábase Niza</l>
+              <l met="2 4 6 8" enjamb="4" cert="0.6236" rhyme="lv">C’os seus alcáz’res de mármor,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9976" rhyme="lu">Envolta en névoa sombriza,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="2" cert="0.9962" rhyme="lv">E de Génova o sagrado</l>
+              <l met="3 7" enjamb="3" cert="0.9984" rhyme="-">Cemiterio, onde Mazzini</l>
+              <l met="1 5 7" enjamb="5" cert="0.998" rhyme="lv">Dorme satisfeito e honrado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9788" rhyme="lw">Os reis negáronlle acobo</l>
+              <l met="2 4 7" enjamb="3" cert="0.661" rhyme="-">En vida, os Papas trouxéron-o</l>
+              <l met="2 5 7" enjamb="4" cert="0.998" rhyme="lw">Errante de povo en povo;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.6261" rhyme="lx">Mais iras e teimas tantas</l>
+              <l met="1 3 5 7" enjamb="3" cert="0.998" rhyme="-">Non privaron que oxe o mundo</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9984" rhyme="lx">Adore suas cinzas santas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="2" cert="0.9673" rhyme="ly">
+                <seg rend="em">¡Laudemus viros gloriosos</seg>
+              </l>
+              <l met="2 4 7" enjamb="5" cert="0.9978" rhyme="-">
+                <seg rend="em">Homines magna virtute!...</seg>
+              </l>
+              <l met="3 5 7" enjamb="2" cert="0.9965" rhyme="ly">Escraméi saudando os osos</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="5" cert="0.9981" rhyme="lz">D’o apóstole d’a unidade.</l>
+              <l met="1 4 7" enjamb="4" cert="0.9808" rhyme="-">Y-Añon, dobrando os xoellos</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="5" cert="0.9967" rhyme="lz">Dixo asintindo:—¡É verdade!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.7262" rhyme="ma">E posto en pé decontado</l>
+              <l met="4 7" enjamb="3" cert="0.9979" rhyme="mb">Cal si d’aquil homenaxe</l>
+              <l met="3 7" enjamb="4" cert="0.9983" rhyme="ma">Estivese apesarado,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.8801" rhyme="mc">Tornóu:—A virtú y-a groria</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="2" cert="0.9607" rhyme="mb">Son soyo dinas de laude</l>
+              <l met="3 7" enjamb="5" cert="0.998" rhyme="mc">Sancionadas pol-a historia.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.8891" rhyme="md">Catón para o mundo enteiro</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9977" rhyme="-">Pasóu por un gran romano</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9981" rhyme="md">E foi un grande usureiro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 6 7" metRg="3 7" enjamb="3" cert="0.7912" rhyme="me">Shakespeare, o poeta ogro,</l>
+              <l met="1 5 7" enjamb="3" cert="0.9735" rhyme="mf">Ise soñador, n’a granxa</l>
+              <l met="1 3 5 7" enjamb="5" cert="0.9982" rhyme="me">D’Avon daba gando ó logro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9558" rhyme="mf">Cervantes, qu’inda oxe pasa</l>
+              <l met="2 5 7" enjamb="3" cert="0.9968" rhyme="me">Por probe, en Madrí era dôno</l>
+              <l met="1 2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9977" rhyme="mf">Non menos qne d’unha casa.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.8913" rhyme="mg">San Rosendo, bispo e asceta,</l>
+              <l met="1 4 7" enjamb="3" cert="0.9975" rhyme="-">Tido por célibe, agora</l>
+              <l met="2 5 7" enjamb="4" cert="0.997" rhyme="mg">Resúltanos... c’unha neta...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 7" metRg="2 7" enjamb="3" cert="0.9981" rhyme="mh">Pois s’inda os d’antigüedade</l>
+              <l met="2 4 7" enjamb="3" cert="0.9952" rhyme="-">Enganan ¿qué te prometes</l>
+              <l met="2 7" enjamb="5" cert="0.9821" rhyme="mh">D’os homes d’a autualidade?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9938" rhyme="mi">D’a sombra envoltos n’o enredo</l>
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="mj">O sol d’a crítica agardan,</l>
+              <l met="4 5 6 7" metRg="4 7" enjamb="4" cert="0.9979" rhyme="mi">E pra que luza inda é cedo</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="2" cert="0.9907" rhyme="mk">—Unha vida toda enteira</l>
+              <l met="2 4 7" enjamb="3" cert="0.7975" rhyme="mj">Ó patrio ben consagrada</l>
+              <l met="1 4 7" enjamb="5" cert="0.9983" rhyme="mk">É de por sí unha fogueira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9678" rhyme="ml">A historia fará a Mazzini</l>
+              <l met="2 5 7" enjamb="3" cert="0.9963" rhyme="mm">Xusticia, argüín—¿acaso</l>
+              <l met="1 2 7" metRg="2 7" enjamb="5" cert="0.9981" rhyme="ml">É il menos que Mazzantini?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.8" rhyme="mn">Y-Añon rosmóu:—Desconfía</l>
+              <l met="2 7" enjamb="4" cert="0.9983" rhyme="mm">D’os xuicios contemporáneos,</l>
+              <l met="2 5 7" enjamb="5" cert="0.9959" rhyme="mn">Que ten a pasión por guía.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 6 7" metRg="2 7" enjamb="4" cert="0.9955" rhyme="mñ">Y-entrando n’o vagon sesto,</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9979" rhyme="-">Fixome boa a sua tesis</l>
+              <l met="2 6 7" metRg="2 7" enjamb="4" cert="0.9983" rhyme="mñ">Dicindo con mordaz xesto:</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="mo">—¿Coneces iste?—É un avaro:</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9951" rhyme="-">Prestóume us cartos ó trinta.</l>
+              <l met="3 5 6 7" metRg="3 5 7" enjamb="5" cert="0.9793" rhyme="mo">—Se pagaches... non foi caro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9973" rhyme="mp">—¿E iste?...—Tamen. É un libreiro:</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9977" rhyme="-">Pedíume un tomo, escribin-llo...</l>
+              <l met="2 7" enjamb="5" cert="0.9979" rhyme="mp">Quedóuseme c’o diñeiro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9952" rhyme="mq">—Y-estoutro?...—Por unha leira</l>
+              <l met="2 3 4 5 7" metRg="2 4 7" enjamb="3" cert="0.9983" rhyme="-">Vendéu sua filla á un <seg rend="em">indiano,</seg></l>
+              <l met="2 4 7" enjamb="5" cert="0.9971" rhyme="mq">Como unha vaca n’a feira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="4" cert="0.9969" rhyme="mr">—Pois ben, ises foraxidos</l>
+              <l met="2 4 7" enjamb="3" cert="0.9977" rhyme="-">Que á raza humana deshonran,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9825" rhyme="mr">D’o mesmo inferno saídos,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="2" cert="0.9826" rhyme="ms">Mañán, pol-o xubileo</l>
+              <l met="2 7" enjamb="4" cert="0.9909" rhyme="mt">D’o Papa induluxenciados,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9979" rhyme="ms">Irán dereitos ó ceo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9974" rhyme="mt">—¿Será verdá?—¡Vaya! E tanto</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="3" cert="0.9911" rhyme="-">Que máis d’un que oxe arrenegas</l>
+              <l met="2 5 7" enjamb="5" cert="0.9982" rhyme="mt">Terás-que o adorar por santo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="2" cert="0.8859" rhyme="mu">O forno d’a idolatría</l>
+              <l met="2 5 7" enjamb="4" cert="0.9984" rhyme="-">Católica non s’apaga</l>
+              <l met="1 5 6 7" metRg="1 5 7" enjamb="4" cert="0.99" rhyme="mu">Y-hache de chegar un día</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9806">
+              <l met="3 7" enjamb="4" cert="0.9954" rhyme="mv">En que rece o Reportorio:</l>
+              <l met="2 5 7" enjamb="3" cert="0.9982" rhyme="-">“San Bras, pederasta:—tírase</l>
+              <l met="2 7 9" enjamb="5" cert="0.9982" rhyme="MV">Anema d’o purgatorio.„</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="3" cert="0.9922" rhyme="mw">N’estas y-outras, o poeta</l>
+              <l met="2 5 7" enjamb="3" cert="0.988" rhyme="-">Contándome casos varios,</l>
+              <l met="2 4 7" enjamb="2" cert="0.995" rhyme="mw">Con verba aguda e discreta,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="4" cert="0.9977" rhyme="mx">De mulleres malcasadas</l>
+              <l met="3 7" enjamb="3" cert="0.9983" rhyme="-">Que d’o leito d’o adulterio</l>
+              <l met="1 5 7" enjamb="4" cert="0.8001" rhyme="mx">Foron para o altar levadas</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9983" rhyme="my">E de ladrós y-asesinos</l>
+              <l met="4 7" enjamb="3" cert="0.9985" rhyme="-">Que con leigados piadosos</l>
+              <l met="2 4 7" enjamb="4" cert="0.997" rhyme="my">Mercaron trunfos divinos,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="2" cert="0.9871" rhyme="mz">Metéume n’o derradeiro</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="2" cert="0.9966" rhyme="-">Furgon, todo él atestado</l>
+              <l met="2 7" enjamb="5" cert="0.9971" rhyme="mz">De xoias e de diñeiro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9982" rhyme="na">E sinalando as talegas</l>
+              <l met="2 4 7" enjamb="3" cert="0.9979" rhyme="-">Qu’están alí amontoadas</l>
+              <l met="2 4 7" enjamb="4" cert="0.995" rhyme="na">Con onzas d’ouro ás fanegas,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9983" rhyme="nb">Arrodillándose dixo:</l>
+              <l met="1 4 7" enjamb="4" cert="0.998" rhyme="-">—¡Fíncate y-adora ó santo</l>
+              <l met="2 5 7" enjamb="5" cert="0.9977" rhyme="nb">Que máis maravillas fixo!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="nc">Diante El abátese a serra,</l>
+              <l met="2 7" enjamb="5" cert="0.4625" rhyme="-">Incrínanse reverentes</l>
+              <l met="4 7" enjamb="3" cert="0.8408" rhyme="nc">As potestades d’a terra</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="3" cert="0.9602" rhyme="nd">Y-en celestes armunías</l>
+              <l met="1 5 7" enjamb="3" cert="0.998" rhyme="-">Fanlle dende o Empíreo salvas</l>
+              <l met="2 7" enjamb="5" cert="0.9982" rhyme="nd">Os coros y-as xerarquías.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9973" rhyme="ne">Eu, obedente ó mandato</l>
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="-">Quitéime homilde o chapeo,</l>
+              <l met="1 3 7" enjamb="4" cert="0.9861" rhyme="ne">Mais querendo, sin porcato,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="nf">Bicar un saco d’aquiles,</l>
+              <l met="1 4 7" enjamb="3" cert="0.9986" rhyme="-">Vin que m’apuntan c’o as armas</l>
+              <l met="1 3 7" enjamb="5" cert="0.9969" rhyme="nf">Duas parexas de <seg rend="em">civiles.</seg></l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9981" rhyme="ng">—¡Se das un paso, rabeas!</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="3" cert="0.9957" rhyme="-">Berróume un d’eles, deixándome</l>
+              <l met="1 4 7" enjamb="5" cert="0.996" rhyme="ng">Mesmo sin sangue n’as veas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="nh">Recuéi enton espantado</l>
+              <l met="5 7" enjamb="3" cert="0.9022" rhyme="-">E tras d’o inmortal poñéndome</l>
+              <l met="2 4 7" enjamb="4" cert="0.9985" rhyme="nh">Pra non morrer fusilado,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="4" cert="0.9984" rhyme="ni">Oín q’Añon me dicía:</l>
+              <l met="2 4 7" enjamb="4" cert="0.9985" rhyme="-">—Pra qu’esto non ch’aconteza,</l>
+              <l met="1 2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9982" rhyme="ni">Non biques, furta outro día.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.9972" rhyme="nj">O ladron sempre ch’escapa</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9975" rhyme="-">Con ben: todo ese tesouro</l>
+              <l met="2 5 7" enjamb="4" cert="0.9979" rhyme="nj">Que vai de regalo ó Papa</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.9979" rhyme="nk">Eche o furto d’a protervia,</l>
+              <l met="3 7" enjamb="3" cert="0.9984" rhyme="nl">Que d’a bulsa d’a Homildade</l>
+              <l met="1 3 7" enjamb="5" cert="0.9977" rhyme="nk">Pasa ó ventre d’a <seg rend="em">Soberbia</seg>.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9956" rhyme="nl">Farto de ver cousas tales</l>
+              <l met="1 3 7" enjamb="2" cert="0.8706" rhyme="-">Iba xa, cando enxergamos</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="nl">De Roma as cen catredales.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9979" rhyme="nm">O tren, d’os frenos contido,</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.9984" rhyme="-">Paróu pouco á pouco; oíuse</l>
+              <l met="1 5 7" enjamb="4" cert="0.9951" rhyme="nm">Un abouxador pitido,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="2" cert="0.9945" rhyme="nn">Y-entre nubes pardacentas</l>
+              <l met="3 5 7" enjamb="3" cert="0.9828" rhyme="-">De vapor, baixamos todos</l>
+              <l met="2 5 7" enjamb="5" cert="0.998" rhyme="nn">D’o coche á pisadas lentas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.9475" rhyme="nñ">Xa en terra, os romeiros fieles</l>
+              <l met="2 5 7" enjamb="3" cert="0.5364" rhyme="-">Rompendo en sagradas cántigas</l>
+              <l met="2 4 7" enjamb="3" cert="0.9799" rhyme="nñ">En Roma entraron; tras d’eles</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9823" rhyme="no">Marchábamos nós falando,</l>
+              <l met="7" enjamb="4" cert="0.9968" rhyme="-">De cando en cando sorrindo</l>
+              <l met="2 7" enjamb="5" cert="0.9982" rhyme="no">E graves de cando en cando.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 6 7" metRg="2 7" enjamb="4" cert="0.9984" rhyme="np">Xa drento d’a Cibdá santa,</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9821" rhyme="-">Vendo n’unha longa rua</l>
+              <l met="2 4 7" enjamb="4" cert="0.9982" rhyme="np">Perderse a xente que canta,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.683" rhyme="nq">Dixo Añon:—¡Danme trembores</l>
+              <l met="3 4 5 7" metRg="3 5 7" enjamb="3" cert="0.9982" rhyme="-">De pensar que han d’ir ó ceo</l>
+              <l met="1 2 7" metRg="2 7" enjamb="5" cert="0.9982" rhyme="nq">Tal fato de pecadores!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.9975" rhyme="nr">Y-eu:—Pois se son perdoados,</l>
+              <l met="1 3 7" enjamb="2" cert="0.9915" rhyme="-">¡Teña Dios misericordia</l>
+              <l met="2 4 7" enjamb="5" cert="0.9982" rhyme="nr">D’os probes homes honrados!</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <head>VII</head>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9733" rhyme="ns">Cansos d’o longo camiño,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9971" rhyme="nr">Pra dar ás forzas reparo</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.9934" rhyme="ns">C’un par de pingas de viño,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9981" rhyme="nt">Xa a espedicion terminada,</l>
+              <l met="3 7" enjamb="4" cert="0.997" rhyme="nu">O primeiro que fixemos</l>
+              <l met="1 4 7" enjamb="5" cert="0.9981" rhyme="nt">Foi precurarnos pousada.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.8096" rhyme="nu">Traballo custóu, por certo,</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="4" cert="0.9981" rhyme="nv">Topar sitio aquela noite</l>
+              <l met="4 7" enjamb="4" cert="0.9982" rhyme="nu">Onde nos pór á cuberto;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.6584">
+              <l met="1 4 7" enjamb="4" cert="0.9977" rhyme="-">Pois a lexión penitente</l>
+              <l met="2 5 7" enjamb="3" cert="0.8777" rhyme="-">Querendo ganar a groria</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9957" rhyme="nv">Todo o máis cómodamente,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="4" cert="0.9975" rhyme="nw">Colléranos a dianteira</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="3" cert="0.9947" rhyme="-">E non deixóu pr’on romedio</l>
+              <l met="2 7" enjamb="5" cert="0.9972" rhyme="nw">Pousada... nin pousadeira.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9671" rhyme="nx"><seg rend="em">—Deo gratias</seg>—Añon dicía</l>
+              <l met="2 4 7" enjamb="3" cert="0.9294" rhyme="-">Batendo ás portas, y-en todas</l>
+              <l met="2 4 7" enjamb="5" cert="0.9967" rhyme="nx">Repóñenlle<seg rend="em">:—¡Andate vía!</seg></l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="3" cert="0.9569" rhyme="ny">—¿Seique non hai hospedaxe</l>
+              <l met="2 3 7" metRg="2 7" enjamb="4" cert="0.9922" rhyme="-">Pra nós, Mestre?—interroguéille,</l>
+              <l met="4 7" enjamb="5" cert="0.9978" rhyme="ny">Disimulando o coraxe.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9965" rhyme="nz">—¡Seique non!—¡Outra com’éla!...</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="3" cert="0.9981" rhyme="-">—Roma non quer pelegrinos</l>
+              <l met="3 7" enjamb="5" cert="0.9974" rhyme="nz">Sin alforxa e caravela.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9929" rhyme="ña">S’en vez d’o brazo valdeiro</l>
+              <l met="2 5 7" enjamb="3" cert="0.998" rhyme="-">Trouxéramos d’él colgado</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9493" rhyme="ña">Un <seg rend="em">cabas</seg> cheo de diñeiro,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="5" cert="0.8874" rhyme="ñb">Outro galo nos cantara...</l>
+              <l met="1 2 3 5 6 7" metRg="1 3 5 7" enjamb="4" cert="0.9973" rhyme="-">¿Qué muro un cañon non deita</l>
+              <l met="2 4 7" enjamb="5" cert="0.9977" rhyme="ñb">Se bala d’ouro dispara?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9985" rhyme="ñc">Hache servir de goberno:</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="3" cert="0.7644" rhyme="-">Pra irmos ó ceo oxe en día</l>
+              <l met="1 4 7" enjamb="5" cert="0.9973" rhyme="ñc">Cómpre permiso d’o inferno.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9984" rhyme="ñb">—Se sei que non collo casa,</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.4321" rhyme="-">Non veño.—A igrexa e a langostra</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9981" rhyme="ñb">Alí onde cai, todo o arrasa.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.5268" rhyme="ñd">Así falando o grorioso,</l>
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="ñb">Ibamos por unha rua</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="ñd">Qne ó Tibre sai cenagoso,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9386" rhyme="ñe">Cando un mesón vendo á xeito</l>
+              <l met="2 6 7" metRg="2 7" enjamb="3" cert="0.9938" rhyme="-">Entramos, e o dôno púxonos</l>
+              <l met="1 3 5 7" enjamb="5" cert="0.9979" rhyme="ñe">Forte mesa e limpo leito.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.6315" rhyme="ñf">Non puden dormir: sufrira</l>
+              <l met="1 4 7" enjamb="3" cert="0.9144" rhyme="-">Tanto por todo o viaxe,</l>
+              <l met="3 5 7" enjamb="4" cert="0.9982" rhyme="ñf">Tan cativas cousas vira,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="5" cert="0.7963" rhyme="ñg">Que mil impresiós estrañas</l>
+              <l met="2 5 7" enjamb="4" cert="0.8541" rhyme="-">Tivéronme toda a noite</l>
+              <l met="2 7" enjamb="5" cert="0.9971" rhyme="ñg">Pensando n’as musarañas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="3" cert="0.9981" rhyme="ñh">Pol-a mañá o pousadeiro</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.9933" rhyme="-">Déunol-a conta—dez <seg rend="em">liras;</seg></l>
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.9842" rhyme="ñh">Pero non tendo diñeiro</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.9976" rhyme="ñi">Añon, con papel e pruma</l>
+              <l met="1 5 7" enjamb="4" cert="0.9979" rhyme="-">Púxose á esquirbir estrofas,</l>
+              <l met="5 7" enjamb="5" cert="0.9966" rhyme="ñi">Hastra compretar a suma.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 4 5 7" metRg="1 3 5 7" enjamb="4" cert="0.9975" rhyme="ñj">—Ahí tés, non ben íl termina</l>
+              <l met="1 3 7" enjamb="4" cert="0.9976" rhyme="-">Dille—e pois que nos tratache</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9983" rhyme="ñj">Cal reis, colle esa prepina.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9984" rhyme="ñk">Y-a lira dourada espindo</l>
+              <l met="2 5 7" enjamb="3" cert="0.9734" rhyme="ñl">Que trai pendurada ó lombo,</l>
+              <l met="4 7" enjamb="4" cert="0.6778" rhyme="ñk">Garda-fronteiro d’o Pindo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.9985" rhyme="ñm">Déulla e foise d’a hostería,</l>
+              <l met="2 5 7" enjamb="4" cert="0.9981" rhyme="ñl">Deixando ó patron atóneto,</l>
+              <l met="1 4 7" enjamb="5" cert="0.998" rhyme="ñm">Parvo de tanta ousadía.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9654" rhyme="ñn">Con qué lle tiña pagado</l>
+              <l met="1 3 5 7" enjamb="5" cert="0.998" rhyme="-">Añon, non-o soupen nunca.</l>
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9982" rhyme="ñn">Cecais c’un himno... ó papado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9806" rhyme="ññ">O sacrosanto nagocio</l>
+              <l met="4 5 7" metRg="4 7" enjamb="3" cert="0.997" rhyme="-">Con que Leon XIII festexa</l>
+              <l met="1 2 7" metRg="2 7" enjamb="3" cert="0.9785" rhyme="ññ">Sua entrada n’o sazardocio</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.5253" rhyme="ño">Chegara xa, y-era un día</l>
+              <l met="1 3 7" enjamb="3" cert="0.602" rhyme="-">Le xaneiro condanado</l>
+              <l met="3 7" enjamb="5" cert="0.9982" rhyme="ño">Pol-o cerzo que corría.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9959" rhyme="ñp">A rouca voz d’as campanas</l>
+              <l met="2 4 7" enjamb="4" cert="0.9967" rhyme="-">Enchía os aires d’estrondos</l>
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="ñp">Chamando ás xentes cristianas,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="4" cert="0.9937" rhyme="ñq">E víanse en ringuileiras</l>
+              <l met="2 4 7" enjamb="3" cert="0.9969" rhyme="ñp">Xurdir por todal-as ruas</l>
+              <l met="3 7" enjamb="5" cert="0.9975" rhyme="ñq">Os romeiros... y-as rameiras.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.997" rhyme="ñr">Todos van pr’o Vaticano;</l>
+              <l met="2 3 6 7" metRg="2 7" enjamb="4" cert="0.9978" rhyme="-">Alí ten que misar oxe</l>
+              <l met="3 7" enjamb="4" cert="0.9979" rhyme="ñr">O Pontífece romano</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9981" rhyme="ñs">Y-o santo ritual ordea</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="4" cert="0.9973" rhyme="-">Que quen queira ser ausolto</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="5" cert="0.998" rhyme="ñs">É menester que alí estea.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9268" rhyme="ñt">Seguindo á pós d’a romaxe</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.7536" rhyme="-">Añon y-eu repostos, xuntos</l>
+              <l met="3 7" enjamb="2" cert="0.994" rhyme="ñt">Y-en boa camaradaxe</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9835" rhyme="ñu">D’a mútua fe pr’a desmedro</l>
+              <l met="2 7" enjamb="2" cert="0.9963" rhyme="-">Entramos baixo d’as bóvedas</l>
+              <l met="4 7" enjamb="5" cert="0.9976" rhyme="ñu">D’a catredal de S. Pedro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 5 7" metRg="2 4 7" enjamb="2" cert="0.9951" rhyme="ñv">Aquelo era un grande río</l>
+              <l met="1 4 7" enjamb="5" cert="0.9551" rhyme="-">D’ouro, de pelras, de rasos...</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9981" rhyme="ñv">¡Cánta luz! ¡cánto xentío!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="3" cert="0.9952" rhyme="ñw">N’os vidros d’os lumiares</l>
+              <l met="2 5 7" enjamb="3" cert="0.9971" rhyme="-">Os santos, en mirrha envoltos,</l>
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.9966" rhyme="ñw">C’os seus nimbos estrelares,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="2 5 7" enjamb="3" cert="0.743" rhyme="ñx">Pasmados de tal grandeza</l>
+              <l met="1 4 7" enjamb="4" cert="0.9965" rhyme="-">Chóscanse o ollo, dicindo:</l>
+              <l met="1 2 4 5 8" metRg="2 4 8" enjamb="5" cert="0.9971" rhyme="ñx">”¡Cómo ha de ser!...„ c’o a cabeza.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.9982" rhyme="ñy">De pronto, por toda a nave</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9982" rhyme="ñz">Oise un marmullo d’asombro</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="5" cert="0.9977" rhyme="ñy">E sigue un silencio grave.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="oa">O Papa trepa n’o estrado,</l>
+              <l met="1 5 7" enjamb="4" cert="0.9982" rhyme="ñz">Bota a bendición ó povo</l>
+              <l met="3 7" enjamb="4" cert="0.9984" rhyme="oa">Que o contempra entusiasmado,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.8251">
+              <l met="5 7" enjamb="4" cert="0.9983" rhyme="ob">E mentras os peitos ferven,</l>
+              <l met="1 4 7" enjamb="4" cert="0.9983" rhyme="-">Todal-as testas se baixan,</l>
+              <l met="1 4 7" enjamb="5" cert="0.998" rhyme="ob">Todal-as nádegas s’erguen.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.953" rhyme="oc">Homillación tan compreta</l>
+              <l met="1 4 7" enjamb="4" cert="0.9981" rhyme="-">Vendo, quedéi sonroxado;</l>
+              <l met="1 4 7" enjamb="4" cert="0.998" rhyme="oc">Mais pr’a calmarme, o poeta:</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="5" cert="0.9226" rhyme="od">—É n’esa autitú cristiana,</l>
+              <l met="1 4 7" enjamb="3" cert="0.9975" rhyme="-">Dixo—en que os biólogos fundan</l>
+              <l met="4 7" enjamb="5" cert="0.9981" rhyme="od">Nosa orixen cuadrumana.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9846" rhyme="oe">Perdida a garra y-o rabo</l>
+              <l met="1 3 7" enjamb="3" cert="0.9976" rhyme="-">Desque a selva primitiva</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="3" cert="0.8949" rhyme="oe">Deixóu, pra ser home ó cabo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.995" rhyme="of">Soyo cando á pór se presta</l>
+              <l met="2 4 7" enjamb="4" cert="0.9976" rhyme="og">De bruzes, mostra o católico</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="5" cert="0.9976" rhyme="of">Que antes de sel-o foi besta.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.5759" rhyme="og">Non botes en saco roto</l>
+              <l met="1 5 7" enjamb="5" cert="0.8582" rhyme="-">Esta adevertencia, fillo,</l>
+              <l met="1 2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9978" rhyme="og">Pois sei de máis d’un devoto</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="2 3 5 6 7" metRg="2 5 7" enjamb="4" cert="0.9983" rhyme="oh">Pra quen toda cencia é vana,</l>
+              <l met="2 4 7" enjamb="3" cert="0.9984" rhyme="-">Que sempre que ora confirma</l>
+              <l met="4 8" enjamb="5" cert="0.9982" rhyme="oh">A teoría darwiniana.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="2" cert="0.9966" rhyme="oi">O Papa, n’esto, vestido</l>
+              <l met="1 3 7" enjamb="2" cert="0.9958" rhyme="-">D’albos tisues e brocados,</l>
+              <l met="1 4 7" enjamb="4" cert="0.8538" rhyme="oi">D’ouro e de pedras cinguido,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.998" rhyme="oj">Alzóu con pulso seguro</l>
+              <l met="1 5 7" enjamb="3" cert="0.9981" rhyme="-">A hostia, que á min de lonxe</l>
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9976" rhyme="oj">Somellóume un peso-duro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.9952" rhyme="ok">Voces enton arxentinas</l>
+              <l met="2 5 7" enjamb="3" cert="0.9677" rhyme="-">Encheron a inmensa cúpula</l>
+              <l met="1 3 7" enjamb="2" cert="0.9741" rhyme="ok">D’unhas notas tan divinas,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.9982" rhyme="ol">D’unha música tan grata,</l>
+              <l met="3 5 7" enjamb="4" cert="0.9887" rhyme="om">Que parez que a tocan ánxeles</l>
+              <l met="2 4 7" enjamb="5" cert="0.9979" rhyme="ol">Soprando en trompas de prata.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="3" cert="0.9854" rhyme="on">E logo outras voces inda</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="3" cert="0.9797" rhyme="om">Máis doces e máis soaves</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="3" cert="0.998" rhyme="on">D’unha cadencia máis linda</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9983" rhyme="oñ">Sentin, d’armonía tanta,</l>
+              <l met="5 7" enjamb="3" cert="0.7951" rhyme="om">Que de perguntar ó vate</l>
+              <l met="1 2 4 6 7" metRg="2 4 7" enjamb="5" cert="0.9658" rhyme="oñ">Non puden menos:—¿Quén canta?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.998" rhyme="oo">—¡Quén ha de ser¡¡malpocados!</l>
+              <l met="2 5 7" enjamb="4" cert="0.9981" rhyme="-">Quitóulles a igrexa o xénero;</l>
+              <l met="1 2 3 5 7" metRg="1 3 5 7" enjamb="5" cert="0.998" rhyme="oo">Non tén nome; son... castrados.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="3" cert="0.909" rhyme="op">N’a loita d’a santidade</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9898" rhyme="-">Aquí a muller perde... a honra,</l>
+              <l met="1 7" enjamb="5" cert="0.9983" rhyme="op">Y-o home... a virilidade.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="4" cert="0.9978" rhyme="oq">Tal dixo Añon, e calóuse,</l>
+              <l met="2 6 7" metRg="2 7" enjamb="3" cert="0.9976" rhyme="-">A tempo que d’o <seg rend="em">Tu es Petrus</seg></l>
+              <l met="1 4 7" enjamb="5" cert="0.9858" rhyme="oq">O himno xigante escoitóuse.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="4" cert="0.9945" rhyme="or">—¡Non! berrei, fervendo en ira,</l>
+              <l met="3 7" enjamb="4" cert="0.9963" rhyme="-">Encarándome c’o Papa—</l>
+              <l met="4 5 7" metRg="4 7" enjamb="5" cert="0.9983" rhyme="or">¡O que che din é mentira!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.9977" rhyme="os">Quen d’o vilipendio humano</l>
+              <l met="1 3 4 5 6 7" metRg="1 3 5 7" enjamb="4" cert="0.6776" rhyme="-">Vive, non é Pedro, é Xudas;</l>
+              <l met="1 2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9984" rhyme="os">Non é Cristo, é Diocleciano!</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9979" rhyme="ot">Por sorte, canto eu dicía</l>
+              <l met="1 4 7" enjamb="2" cert="0.9954" rhyme="-">Nadi’o entendéu entr’aquela</l>
+              <l met="3 7" enjamb="5" cert="0.9978" rhyme="ot">Formidabre sinfonía.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.9984" rhyme="ou">Acabada a misa, o Papa</l>
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="4" cert="0.9981" rhyme="-">Rubíu n’unhas andas d’ouro</l>
+              <l met="2 5 7" enjamb="4" cert="0.9981" rhyme="ou">Que levan cardeás con capa</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 6 7" metRg="3 7" enjamb="4" cert="0.9969" rhyme="ov">Y-o pasar pol-o meu lado,</l>
+              <l met="1 4 7" enjamb="4" cert="0.9983" rhyme="-">Díxome:—Agárdote ás doce:</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="5" cert="0.9979" rhyme="ov">Hemos comer un bocado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9068" rhyme="ow">Cáxeque morto d’asombro</l>
+              <l met="2 5 7" enjamb="4" cert="0.5759" rhyme="-">Quedéi; consultéi ó vello</l>
+              <l met="2 5 7" enjamb="4" cert="0.5951" rhyme="ow">Y-o vello, encollendo o hombro,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="5" cert="0.9903" rhyme="ox">Repricóume:—Acode á cita.</l>
+              <l met="1 2 3 4 7" metRg="2 4 7" enjamb="5" cert="0.9972" rhyme="-">—Non vou soyo.—Eu t’acompaño.</l>
+              <l met="4 7" enjamb="5" cert="0.9977" rhyme="ox">E proparéime á visita.</l>
+            </lg>
+          </lg>
+        </div>
+        <div type="poem-section">
+          <head>VIII</head>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="2" cert="0.9938" rhyme="oy">Os dous agardando a hora</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9365" rhyme="-">D’ir xantar c’o Santo Padre</l>
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="oy">Botamos d’o tempro fóra,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9982" rhyme="oz">E pra poder aprecial-os</l>
+              <l met="1 3 7" enjamb="2" cert="0.9963" rhyme="-">Fomos ver as galarías</l>
+              <l met="4 7" enjamb="5" cert="0.998" rhyme="oz">D’Esposición d’os regalos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="3" cert="0.9665" rhyme="pa">Canto en sigros dazanove</l>
+              <l met="4 7" enjamb="3" cert="0.9961" rhyme="-">O temporal poderío</l>
+              <l met="1 5 7" enjamb="4" cert="0.998" rhyme="pa">Ten arrapiñado ó probe;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.9983" rhyme="pb">Canto se ten apropeado</l>
+              <l met="2 7" enjamb="2" cert="0.9776" rhyme="-">A garra cardealicia</l>
+              <l met="2 7" enjamb="3" cert="0.8712" rhyme="pb">Y-o ventre d’o episcopado,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="2" cert="0.9531" rhyme="pc">Alí está, en montós xigantes</l>
+              <l met="3 7" enjamb="4" cert="0.9976" rhyme="-">D’o oriental manificencia—</l>
+              <l met="3 7" enjamb="3" cert="0.9983" rhyme="pc">Dende as pelras y-os diamantes</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="4" cert="0.9751" rhyme="pd">Hastra a prata e ouro fino—</l>
+              <l met="2 4 7" enjamb="3" cert="0.9366" rhyme="-">Enormes bostas guindadas</l>
+              <l met="3 7" enjamb="5" cert="0.9978" rhyme="pd">D’o católico intestino.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.9937" rhyme="pe">Diante d’aquela cruxía</l>
+              <l met="3 7" enjamb="3" cert="0.99" rhyme="-">D’esprendores, onde mesmo</l>
+              <l met="1 7" enjamb="3" cert="0.9984" rhyme="pe">Loce xunta y-á porfía</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.9981" rhyme="pf">Tod’a pompa y-a riqueza</l>
+              <l met="2 4 7" enjamb="4" cert="0.9955" rhyme="-">Qu’encerra o mundo d’o arte</l>
+              <l met="2 7" enjamb="4" cert="0.9982" rhyme="pf">Óu garda a naturaleza,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="3" cert="0.9985" rhyme="pg">Acordéime d’os que fozan</l>
+              <l met="2 6 7" metRg="2 7" enjamb="4" cert="0.9805" rhyme="-">N’a terra, d’os que non comen,</l>
+              <l met="3 4 6 7" metRg="3 7" enjamb="4" cert="0.9976" rhyme="pg">D’os que non rin e non gozan;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 7" enjamb="4" cert="0.9744" rhyme="ph">D’o labrego que traballa</l>
+              <l met="3 5 7" enjamb="4" cert="0.9984" rhyme="-">Pra manter muller e fillos</l>
+              <l met="2 4 7" enjamb="4" cert="0.9976" rhyme="ph">E dorme en móllos de palla;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.8745" rhyme="pi">D’o probe vello baldado</l>
+              <l met="4 7" enjamb="3" cert="0.9963" rhyme="-">Sin agarimo n’o inverno,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9877" rhyme="pi">De porta en porta arrastrado;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 7" enjamb="3" cert="0.9937" rhyme="pj">D’o neno qu’emporranchiño,</l>
+              <l met="1 4 7" enjamb="3" cert="0.8773" rhyme="pk">Orfo, perdido n’a fraga,</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9719" rhyme="pj">Garda o gando d’un veciño;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9822" rhyme="pl">D’o frio lar, que da medo;</l>
+              <l met="2 5 7" enjamb="2" cert="0.6739" rhyme="pk">D’os órreos sin grau; d’as vacas</l>
+              <l met="2 5 7" enjamb="4" cert="0.998" rhyme="pl">Sin leite; d’o arado quedo...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="4" cert="0.9982" rhyme="pm">E c’un amargor sin nome:</l>
+              <l met="1 3 5 7" enjamb="4" cert="0.9792" rhyme="-">—¡Cántos sudan n’este mundo—</l>
+              <l met="2 5 6 7" metRg="2 5 7" enjamb="5" cert="0.9979" rhyme="pm">Penséi—pra que folgue un home!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 7" enjamb="4" cert="0.9979" rhyme="pn">Y-Añon, cal se m’escoitara:</l>
+              <l met="3 5 7" enjamb="5" cert="0.9969" rhyme="pñ">—¿Logo seique tés envexa?—</l>
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.9786" rhyme="pn">Díxome—pois ben, repara:</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="3" cert="0.9935" rhyme="po">Iste cális esmaltado</l>
+              <l met="5 7" enjamb="2" cert="0.9686" rhyme="pñ">Desaparecéu d’a igrexa</l>
+              <l met="2 4 7" enjamb="5" cert="0.9981" rhyme="po">D’Ousende o ano pasado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="3" cert="0.9977" rhyme="pp">Esta costodia esculpida</l>
+              <l met="1 3 7" enjamb="3" cert="0.9976" rhyme="po">Foi d’a hermida de Seixalvo</l>
+              <l met="1 4 7" enjamb="5" cert="0.9982" rhyme="pp">Noites atrás sustraída.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="1 3 4 6 7" metRg="1 3 7" enjamb="3" cert="0.9603" rhyme="pq">Canto tés diante os teus ollos</l>
+              <l met="1 5 7" enjamb="4" cert="0.998" rhyme="-">Débese d’a fe á gazúa,</l>
+              <l met="1 3 5 8" enjamb="5" cert="0.9981" rhyme="pq">Oue non respeta ferrollos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.8621" rhyme="pr">¿E queres con tal grandeza</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="-">Facer a sorte d’os probes?</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="5" cert="0.9978" rhyme="pr">¡Pois pídeslles boa limpeza!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 5 7" enjamb="3" cert="0.9893" rhyme="ps">—Contra todo espolio feito</l>
+              <l met="2 4 7" enjamb="4" cert="0.9862" rhyme="-">Ós povos cabe interdiuto...</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="5" cert="0.9984" rhyme="ps">—¿Qué entendes tí de Dereito?</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="3" cert="0.512" rhyme="pt">Os bens non enventariados</l>
+              <l met="1 4 7" enjamb="4" cert="0.9227" rhyme="pu">Son d’o primeiro que os pilla,</l>
+              <l met="3 7" enjamb="5" cert="0.9978" rhyme="pt">Diquiridos ou roubados.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="4" cert="0.9535" rhyme="pv">E s’o que os furta acontece</l>
+              <l met="1 2 7" metRg="2 7" enjamb="4" cert="0.9979" rhyme="pu">Ser xente de sancristía,</l>
+              <l met="3 4 7" metRg="3 7" enjamb="5" cert="0.9983" rhyme="pv">O ladrón nunca aparece.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="3" cert="0.9793" rhyme="pw">Iniquidá, desacato,</l>
+              <l met="3 5 6 7" metRg="3 5 7" enjamb="3" cert="0.9741" rhyme="-">O que queiras... mais é forza</l>
+              <l met="3 7" enjamb="5" cert="0.9982" rhyme="pw">Respetar o Concordato.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="4" cert="0.9983" rhyme="px">Así o meu vello falaba</l>
+              <l met="4 7" enjamb="4" cert="0.9896" rhyme="-">Cando tivemos aviso</l>
+              <l met="4 5 7" metRg="4 7" enjamb="5" cert="0.9975" rhyme="px">De que Leon XIII agardaba.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.998" rhyme="py">—Vamos alá—dixo o vate—</l>
+              <l met="3 4 7" metRg="3 7" enjamb="2" cert="0.9939" rhyme="-">E correndo unha cortina</l>
+              <l met="3 5 7" enjamb="4" cert="0.7401" rhyme="py">De veludo cor granate,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="4" cert="0.9984" rhyme="pz">N’un camarin penetramos,</l>
+              <l met="3 5 7" enjamb="3" cert="0.9981" rhyme="-">Onde xa sentado á mesa</l>
+              <l met="2 4 7" enjamb="5" cert="0.9933" rhyme="pz">O Padre Santo miramos.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="2 5 7" enjamb="4" cert="0.9973" rhyme="qa">—Sentáivos tamen—nos dixo—</l>
+              <l met="4 6 8" enjamb="4" cert="0.9776" rhyme="-">Requeneóu catro preces,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="qa">O pan y-as ostras bendixo,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="2" cert="0.9958" rhyme="qb">Y-entanto unha copa enteira</l>
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="-">De viño vello apuraba,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="qb">Falóume d’esta maneira:</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 3 5 7" metRg="1 3 5 7" enjamb="4" cert="0.9984" rhyme="qc">—Sei quen és: se o non soubera,</l>
+              <l met="4 7" enjamb="3" cert="0.9975" rhyme="-">O que berrache en S. Pedro</l>
+              <l met="1 3 7" enjamb="5" cert="0.9981" rhyme="qc">Craramente m’o dixera.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="3" cert="0.9808" rhyme="qd">Tí vés, cantor galiciano,</l>
+              <l met="1 3 6 7" metRg="1 3 7" enjamb="3" cert="0.9981" rhyme="-">D’unha raza que odeóu sempre</l>
+              <l met="4 7" enjamb="5" cert="0.9977" rhyme="qd">O predominio romano.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9973" rhyme="qe">Alá d’o monte Medulio</l>
+              <l met="3 5 7" enjamb="3" cert="0.9985" rhyme="-">N’as ladeiras, inda os osos</l>
+              <l met="2 5 7" enjamb="2" cert="0.9893" rhyme="qe">Relocen ó sol de xulio</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="4 7" enjamb="3" cert="0.9979" rhyme="qf">De teus abós que, brandindo</l>
+              <l met="3 5 7" enjamb="3" cert="0.998" rhyme="qg">Contra o Imperio a fouce céltica,</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="5" cert="0.9981" rhyme="qf">Un á un, foron caíndo.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="7" enjamb="2" cert="0.9953" rhyme="qh">Pero d’os Conqueridores</l>
+              <l met="2 5 7" enjamb="2" cert="0.8942" rhyme="qg">Pasados, d’os mortos déspotas,</l>
+              <l met="1 7" enjamb="3" cert="0.9979" rhyme="qh">Césares y-Emperadores</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9978" rhyme="qi">O Papa non é o herdeiro:</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9957" rhyme="qg">Son-o o reis que oxe gobernan,</l>
+              <l met="2 5 7" enjamb="5" cert="0.9983" rhyme="qi">Castigo d’o mundo enteiro.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="4" cert="0.8954" rhyme="qj">¡Ai! Olla: por toda a terra</l>
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="4" cert="0.9981" rhyme="-">Érguese un bafo de morte</l>
+              <l met="3 7" enjamb="5" cert="0.998" rhyme="qj">Que os espíritus aterra.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="5" cert="0.9748" rhyme="qk">Naciós de todal-as trazas,</l>
+              <l met="1 4 7" enjamb="4" cert="0.9983" rhyme="-">Homes de todol-os crimas,</l>
+              <l met="1 4 7" enjamb="3" cert="0.9921" rhyme="qk">Xentes de todal-as razas</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="4" cert="0.9981" rhyme="ql">Míranse con ollo airado,</l>
+              <l met="1 3 5 7" enjamb="3" cert="0.9973" rhyme="qk">Búscanse us os outros y-alzan</l>
+              <l met="1 4 7" enjamb="5" cert="0.9982" rhyme="ql">N’o aire o puño pechado.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="3" cert="0.991" rhyme="qm">O fillo d’o Norte, frío,</l>
+              <l met="2 5 7" enjamb="3" cert="0.9406" rhyme="-">Desputa ó d’o Oriente, inquieto,</l>
+              <l met="3 7" enjamb="5" cert="0.9983" rhyme="qm">D’a fronteira o señorío.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9951" rhyme="qn">Recrama o galo ó xermano</l>
+              <l met="2 7" enjamb="4" cert="0.9982" rhyme="-">As terras que lle detenta;</l>
+              <l met="2 4 7" enjamb="4" cert="0.786" rhyme="qn">D’o ingrés recea o italiano;</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="5" cert="0.9963" rhyme="qñ">Rifa Améreca co’a Europa;</l>
+              <l met="4 5 7" metRg="4 7" enjamb="4" cert="0.9969" rhyme="qo">Os arsenás funden ferro;</l>
+              <l met="3 5 7" enjamb="5" cert="0.9982" rhyme="qñ">Os cuartés dispóñen tropa.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 6 7" metRg="1 5 7" enjamb="2" cert="0.9947" rhyme="qo">Roda pol-o espacio un vento</l>
+              <l met="4 7" enjamb="4" cert="0.9981" rhyme="-">D’asolacion e esterminio</l>
+              <l met="3 7" enjamb="5" cert="0.9627" rhyme="qo">Qu’escurece o firmamento...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9856">
+              <l met="1 3 5 7" enjamb="4" cert="0.9886" rhyme="qp">Treme o chau, vacila a roca;</l>
+              <l met="1 5 6 8" metRg="1 6 8" enjamb="2" cert="0.9922" rhyme="qo">¡Rompe en cada peito un odeo</l>
+              <l met="1 3 7" enjamb="5" cert="0.9983" rhyme="qp">E un ultraxe en cada boca!</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 4 7" metRg="2 4 7" enjamb="3" cert="0.9855" rhyme="qq">Y-aquí o Papa outro traguiño</l>
+              <l met="2 5 6 7" metRg="2 5 7" enjamb="5" cert="0.9901" rhyme="qo">Botando, escramóu:—¡Qué tempos!</l>
+              <l met="1 5 6 7" metRg="1 5 7" enjamb="5" cert="0.998" rhyme="qq">Y-Añon respondéu:—¡Qué viño!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 5 7" metRg="2 5 7" enjamb="5" cert="0.9976" rhyme="qr">¿Terá a igrexa quen ll’acuda?</l>
+              <l met="1 3 7" enjamb="3" cert="0.9548" rhyme="-">—¡Vinte sigros pedricando</l>
+              <l met="3 5 7" enjamb="5" cert="0.9984" rhyme="qr">Caridade pra esa duda!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.9826" rhyme="qs">¡Señor! O mundo moderno</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.9962" rhyme="-">Non é, como o mundo antigo,</l>
+              <l met="2 4 7" enjamb="5" cert="0.9983" rhyme="qs">A imaxen viva d’o inferno.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 5 7" enjamb="2" cert="0.8876" rhyme="qt">Os povos están chamados</l>
+              <l met="3 7" enjamb="4" cert="0.9982" rhyme="-">A rexil-o: cando trunfen,</l>
+              <l met="4 7" enjamb="3" cert="0.7246" rhyme="qt">Cando d’o chau levantados</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 7" enjamb="4" cert="0.9977" rhyme="qu">O himno canten d’a vitoria,</l>
+              <l met="3 5 7" enjamb="3" cert="0.9901" rhyme="-">Volveránse á Dios y-os ceos</l>
+              <l met="5 7" enjamb="5" cert="0.9938" rhyme="qu">Resprandecerán de groria.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="3" cert="0.9271" rhyme="qv">Y-enton, Señor, non temades</l>
+              <l met="3 5 6 7" metRg="3 5 7" enjamb="4" cert="0.9981" rhyme="qw">Pol-a igrexa que ela é barca</l>
+              <l met="2 7" enjamb="5" cert="0.9984" rhyme="qv">Que flota n’as tempestades.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 5 7" enjamb="3" cert="0.9964" rhyme="qx">Estas democracias novas</l>
+              <l met="1 2 5 7" metRg="2 5 7" enjamb="3" cert="0.9984" rhyme="qw">Son feitas d’amor e gastan</l>
+              <l met="3 7" enjamb="5" cert="0.9984" rhyme="qx">A piedade por arrobas.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.6985" rhyme="qy">¡Amádeas! ¡Que ollen e vexan</l>
+              <l met="2 4 6 7" metRg="2 4 7" enjamb="4" cert="0.9974" rhyme="-">Que Cristo está d’a sua parte</l>
+              <l met="3 7" enjamb="5" cert="0.9981" rhyme="qy">Mentres loitan e pelexan!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="4" cert="0.9787" rhyme="qz">Quédese a rabia pr’os lobos:</l>
+              <l met="1 2 4 5 7" metRg="2 4 7" enjamb="5" cert="0.9983" rhyme="-">¡Cristo era bon, era homilde!</l>
+              <l met="3 5 7" enjamb="5" cert="0.9977" rhyme="qz">Y-a homildá cautiva ós povos.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 4 7" metRg="1 3 7" enjamb="3" cert="0.9332" rhyme="ra">Tal faléi: Añon estaba</l>
+              <l met="1 5 7" enjamb="4" cert="0.9984" rhyme="-">Páledo; volvin a testa</l>
+              <l met="2 4 7" enjamb="5" cert="0.986" rhyme="ra">E vin que o Papa... choraba.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 2 4 5 6 7" metRg="2 4 7" enjamb="5" cert="0.9969" rhyme="rb">—¿Qué ten, Señor?—¡Esto é feito!</l>
+              <l met="3 6 7" metRg="3 7" enjamb="3" cert="0.5644" rhyme="-">Repricóume—e n’aquel punto,</l>
+              <l met="2 4 7" enjamb="4" cert="0.9984" rhyme="rb">Erguendo o busto escorreito,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="3 4 7" metRg="3 7" enjamb="4" cert="0.9961" rhyme="rc">Marmuróu:—Ide e anunciade</l>
+              <l met="2 5 7" enjamb="4" cert="0.9857" rhyme="-">Que o Papa renuncia á Roma</l>
+              <l met="3 7" enjamb="5" cert="0.9981" rhyme="rc">Pra vivir d’a caridade.</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.9037" rhyme="rd">Dend’oxe a miña facenda,</l>
+              <l met="1 3 4 5 7" metRg="1 3 5 7" enjamb="4" cert="0.998" rhyme="-">Todo o qu’eu teño é d’os probes;</l>
+              <l met="3 4 7" metRg="3 7" enjamb="3" cert="0.506" rhyme="rd">Que as naciós poñan en venda</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 3 5 7" enjamb="3" cert="0.9902" rhyme="re">Canto for meu; d’esto en pago</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9984" rhyme="-">Non quero máis, se m’a dades,</l>
+              <l met="1 4 7" enjamb="5" cert="0.9983" rhyme="re">Que unha cobiña en Santiago!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="4" cert="0.5127" rhyme="rf">Sentinme enton conmovido</l>
+              <l met="2 4 7" enjamb="4" cert="0.9983" rhyme="-">Tamen: o Papa marchóuse,</l>
+              <l met="1 2 4 7" metRg="2 4 7" enjamb="4" cert="0.9966" rhyme="rf">Y-eu, d’Añon sempre collido,</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 3 7" metRg="2 7" enjamb="4" cert="0.998" rhyme="rg">Botéi fóra d’o palacio</l>
+              <l met="4 5 7" metRg="4 7" enjamb="3" cert="0.9967" rhyme="-">E respirei fortemente</l>
+              <l met="2 4 7" enjamb="5" cert="0.9982" rhyme="rg">O vento libre d’o espacio.</l>
+            </lg>
+          </lg>
+          <lg type="stanza-visual">
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 7" enjamb="3" cert="0.998" rhyme="rh">Aquela noite saímos</l>
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="3" cert="0.9982" rhyme="ri">De Roma cu y-o vate; á penas</l>
+              <l met="2 5 7" enjamb="3" cert="0.9974" rhyme="rh">Os dous n’o vagon nos vimos</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="2 4 5 7" metRg="2 4 7" enjamb="4" cert="0.9878" rhyme="rj">De volta pr’o chau paterno,</l>
+              <l met="1 4 6 7" metRg="1 4 7" enjamb="5" cert="0.9884" rhyme="ri">Dixenlle:—Mestre ¿qué pensas?</l>
+              <l met="1 2 3 7" metRg="1 3 7" enjamb="4" cert="0.9954" rhyme="rj">—Que é un gran viño o de Falerno...</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 7" enjamb="2" cert="0.9962" rhyme="rk">—¿Dudas d’os votos formales</l>
+              <l met="2 4 7" enjamb="3" cert="0.9983" rhyme="-">D’o Papa?—¡Nunca se compren</l>
+              <l met="3 7" enjamb="5" cert="0.9983" rhyme="rk">Os programas liberales!</l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="5 7" enjamb="3" cert="0.9431" rhyme="rl">Logo de chegar á España</l>
+              <l met="1 4 7" enjamb="2" cert="0.9954" rhyme="-">Añon tornóuse ó comando</l>
+              <l met="2 7" enjamb="4" cert="0.7844" rhyme="rl">D’a sua <seg rend="em">Santa Compaña</seg></l>
+            </lg>
+            <lg type="tercerilla" cert="0.9917">
+              <l met="1 4 5 7" metRg="1 4 7" enjamb="4" cert="0.994" rhyme="rm">Y-eu, d’o que vin parvo e mudo,</l>
+              <l met="3 4 6 7" metRg="3 7" enjamb="4" cert="0.9944" rhyme="-">Dende enton creo... ou non creo...</l>
+              <l met="4 5 6 7" metRg="4 7" enjamb="5" cert="0.9981" rhyme="rm">Pero dudar ¡xa non dudo!</l>
+            </lg>
+          </lg>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
