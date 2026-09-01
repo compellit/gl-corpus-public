@@ -13,4 +13,4 @@ An `encodingDesc` in the TEI header gives more details.
 
 The project ODD is at the following location: [schema](https://github.com/compellit/corpus-schema/blob/main/compel-schema.odd).
 
-A user interface giving access to the tools is deployed at http://prf2.org/galapagos/
+A user interface giving access to the tools is deployed at https://prf2.org/galapagos/
