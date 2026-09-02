@@ -1,4 +1,7 @@
 # gl-corpus-public
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22251987.svg)](https://doi.org/10.5281/zenodo.22251987)
+
+
 
 TEI versions created at the [COMPEL](https://compellit.github.io) project, based on sources allowing redistribution.
 
@@ -17,4 +20,4 @@ A user interface giving access to the tools is deployed at https://prf2.org/gala
 
 ## Citation
 
-COMPEL Project (2026). Galician public corpus (19th-century poetry). CiTIUS - USC.
+Ruiz Fabo, P., Alonso Pérez, A., Moreau, P. (2026). COMPEL Public Corpus: Galician 19th-Century Poetry. CiTIUS - USC.
